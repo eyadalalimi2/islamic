@@ -1,6 +1,7 @@
 package com.eyadalalimi.islamic.pro;
 
 import android.annotation.TargetApi;
+import android.app.AlarmManager;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -104,7 +105,18 @@ public class MainActivityFist extends AppCompatActivity implements DialogInterfa
         if (!canDrawOverlays())
             showRequestDrawDialog();
 
-        PrayerUtil.setupNextPrayer(context);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            if (alarmManager.canScheduleExactAlarms()) {
+                PrayerUtil.setupNextPrayer(context);
+            } else {
+                Intent intent = new Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
+                startActivity(intent);
+            }
+        } else {
+            PrayerUtil.setupNextPrayer(context);
+        }
+        
         setupDatabase();
 
         ly = findViewById(R.id.mainactivity);
