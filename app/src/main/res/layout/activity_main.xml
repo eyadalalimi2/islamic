@@ -34,24 +34,23 @@
                 android:id="@+id/do3aalyoum"
                 android:gravity="center"
                 android:fontFamily="@font/the_sans"
-
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="5dp"
                 android:textSize="25dp"
                 android:textColor="@color/red"
                 />
 
             <TextView
-                android:text="اجعل هذه الأذكار رفيقك أينما ذهبت"
+                android:id="@+id/dou3a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/dou3a"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 android:fontFamily="@font/the_sans"
-
-                android:textColor="@color/white"
-                android:textSize="18dp"
                 android:gravity="center"
-                />
+                android:text="اجعل هذه الأذكار رفيقك أينما ذهبت"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
         </LinearLayout>
 
     </FrameLayout>
@@ -87,7 +86,7 @@
                     android:id="@+id/btn_azkar"
                     appns:cardCornerRadius="14dp"
                     appns:cardElevation="4dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
@@ -95,44 +94,36 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1"
                     tools:ignore="RtlCompat">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:layout_below="@id/azkar_label"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_margin="12dp"
-                            android:src="@drawable/myicon03" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/azkar_label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
-
                             android:text="@string/ad3iyaaa"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon03" />
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -140,7 +131,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_quran"
                     appns:cardCornerRadius="14dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
@@ -149,43 +140,35 @@
                     android:layout_marginBottom="16dp"
                     appns:cardElevation="4dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end">
-
-                        <ImageView
-                            android:layout_below="@id/quran_label21"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_margin="12dp"
-                            android:src="@drawable/myicon01" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/quran_label21"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
                             android:text="@string/qurankarimm"
-                            android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon01" />
+
+                    </LinearLayout>
 
 
                 </androidx.cardview.widget.CardView>
@@ -201,102 +184,87 @@
                     android:id="@+id/btn_quranlire"
                     appns:cardCornerRadius="14dp"
                     appns:cardElevation="4dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:layout_below="@id/category_label"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_margin="12dp"
-                            android:src="@drawable/myicon02" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/category_label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
-                            android:textColor="@color/white"
                             android:text="@string/quranlire"
+                            android:gravity="center"
                             android:textSize="18sp"
+                            android:textColor="@color/white"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon02" />
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_reminder"
                     appns:cardCornerRadius="14dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginBottom="16dp"
                     appns:cardElevation="4dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end">
-
-                        <ImageView
-                            android:layout_below="@id/reminder_label"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_margin="12dp"
-                            android:src="@drawable/myicon04" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/reminder_label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
                             android:text="@string/adkar2"
-                            android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon04" />
+
+                    </LinearLayout>
 
 
                 </androidx.cardview.widget.CardView>
@@ -312,108 +280,87 @@
                     android:id="@+id/btn_stories"
                     appns:cardCornerRadius="14dp"
                     appns:cardElevation="4dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:layout_below="@id/occasions_label"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_margin="12dp"
-                            android:src="@drawable/myicon07" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/occasions_label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
-
                             android:text="@string/stories2"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon07" />
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_subha"
                     appns:cardCornerRadius="14dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginBottom="16dp"
                     appns:cardElevation="4dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/favorite_label"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
-                            android:src="@drawable/myicon08" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/favorite_label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
                             android:text="@string/subhaaaa"
-                            android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon08" />
+
+                    </LinearLayout>
 
 
                 </androidx.cardview.widget.CardView>
@@ -430,7 +377,7 @@
                     android:id="@+id/prayerbtn"
                     appns:cardCornerRadius="14dp"
                     appns:cardElevation="4dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
@@ -438,47 +385,35 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/azkar_label1"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
-                            android:src="@drawable/myicon05" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/azkar_label1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
                             android:text="@string/prayertime"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon05" />
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -486,7 +421,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/qibladirec"
                     appns:cardCornerRadius="14dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
@@ -495,48 +430,35 @@
                     android:layout_marginBottom="16dp"
                     appns:cardElevation="4dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/quran_label2"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
-                            android:src="@drawable/myicon06" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/quran_label2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
                             android:text="@string/qibla"
-                            android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon06" />
+
+                    </LinearLayout>
 
 
                 </androidx.cardview.widget.CardView>
@@ -556,7 +478,7 @@
                     android:id="@+id/msgislamic"
                     appns:cardCornerRadius="14dp"
                     appns:cardElevation="4dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
@@ -564,47 +486,35 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/azkar_label145"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
-                            android:src="@drawable/myicon11" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/azkar_label145"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
                             android:text="رسائل"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon11" />
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -612,7 +522,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_albukhari"
                     appns:cardCornerRadius="14dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
@@ -621,48 +531,35 @@
                     android:layout_marginBottom="16dp"
                     appns:cardElevation="4dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/quran_label42"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
-                            android:src="@drawable/myicon10" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/quran_label42"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
                             android:text="@string/cat_albukhari"
-                            android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon10" />
+
+                    </LinearLayout>
 
 
                 </androidx.cardview.widget.CardView>
@@ -680,114 +577,88 @@
                     android:id="@+id/cat_nawawiya_40"
                     appns:cardCornerRadius="14dp"
                     appns:cardElevation="4dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1"
                     tools:ignore="RtlCompat">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/category_label47"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
-                            android:src="@drawable/myicon09"
-                            tools:ignore="RtlCompat" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/category_label47"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
                             android:text="الأربعون النووية"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon09" />
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_fiqh"
                     appns:cardCornerRadius="14dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginBottom="16dp"
                     appns:cardElevation="4dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/reminder_label46"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
-                            android:src="@drawable/myicon12" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/reminder_label46"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
                             android:text="@string/cat_fiqh"
-                            android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon12" />
+
+                    </LinearLayout>
 
 
                 </androidx.cardview.widget.CardView>
@@ -807,115 +678,89 @@
                     android:id="@+id/cat_hijri"
                     appns:cardCornerRadius="14dp"
                     appns:cardElevation="4dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1"
                     tools:ignore="RtlCompat">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/category_label474"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
-                            android:src="@drawable/myicon13"
-                            tools:ignore="RtlCompat" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/category_label474"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
                             android:text="التقويم الهجري"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon13" />
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_library"
                     appns:cardCornerRadius="14dp"
-                    appns:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginBottom="16dp"
                     appns:cardElevation="4dp"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1"
                     tools:ignore="RtlCompat">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/reminder_label4674"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
-                            android:src="@drawable/myicon14" />
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:id="@+id/reminder_label4674"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginRight="12dp"
-                            android:layout_marginBottom="12dp"
                             android:fontFamily="@font/the_sans"
                             android:text="المكتبة الاسلامية"
-                            android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            android:gravity="center"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon14" />
+
+                    </LinearLayout>
 
 
                 </androidx.cardview.widget.CardView>
