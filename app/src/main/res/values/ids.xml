@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="cat_quran" type="id" />
+
+    <item name="cat_fatawy" type="id" />
+
+    <item name="cat_quran_item_read" type="id" />
+    <item name="cat_quran_item_tafsir" type="id" />
+    <item name="cat_quran_item_e3rab" type="id" />
+    <item name="cat_quran_item_m3ani" type="id" />
+    <item name="cat_quran_item_index" type="id" />
+    <item name="cat_quran_item_read_virtue" type="id" />
+    <item name="cat_quran_item_doaa" type="id" />
+    <item name="cat_quran_item_save_mark" type="id" />
+    <item name="cat_quran_item_go_mark" type="id" />
+    <item name="cat_library" type="id" />
+    <item name="cat_library_1" type="id" />
+    <item name="cat_fiqh" type="id" />
+    <item name="cat_fiqh_1" type="id" />
+    <item name="quran_page" type="id" />
+
+    <item name="tafsir_moysar" type="id" />
+    <item name="tafsir_saadi" type="id" />
+    <item name="tafsir_baghawi" type="id" />
+
+
+
+</resources>

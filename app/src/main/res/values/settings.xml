@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_city_key">city</string>
+    <string name="pref_city_title">المدينة</string>
+
+    <string name="pref_organization_key">organization</string>
+    <string name="pref_organization_summary">طريقة حساب صلاتي الفجر والمغرب</string>
+    <string name="pref_organization_title">طريقة الحساب</string>
+    <string name="default_organization">5</string>
+
+    <string name="pref_asr_madhab_key">asr_madhab</string>
+    <string name="pref_asr_madhab_summary">اختيار مذهب حساب صلاة العصر</string>
+    <string name="pref_asr_madhab_title">مذهب حساب صلاة العصر</string>
+    <string name="default_asr_madhab">0</string>
+
+    <string name="pref_offsets_settings_key">offsets</string>
+    <string name="pref_offsets_settings_title">تعديل مواعيد الصلاة</string>
+    <string name="pref_time_offset_key">time_offset__</string>
+    <string name="pref_fajr_time_offset_key">time_offset__0</string>
+    <string name="fajr_long_name">صلاة الفجر</string>
+    <string name="pref_sunrise_time_offset_key">time_offset__1</string>
+    <string name="sunrise_long_name">الشروق</string>
+    <string name="pref_duhr_time_offset_key">time_offset__2</string>
+    <string name="dohr_long_name">صلاة الظهر</string>
+    <string name="pref_asr_time_offset_key">time_offset__3</string>
+    <string name="asr_long_name">صلاة العصر</string>
+    <string name="pref_maghrib_time_offset_key">time_offset__4</string>
+    <string name="maghrib_long_name">صلاة المغرب</string>
+    <string name="pref_ishaa_time_offset_key">time_offset__5</string>
+    <string name="ishaa_long_name">صلاة العشاء</string>
+
+    <string-array name="pref_offsets_settings_key_array">
+        <item>@string/pref_fajr_time_offset_key</item>
+        <item>@string/pref_sunrise_time_offset_key</item>
+        <item>@string/pref_duhr_time_offset_key</item>
+        <item>@string/pref_asr_time_offset_key</item>
+        <item>sunset</item>
+        <item>@string/pref_maghrib_time_offset_key</item>
+        <item>@string/pref_ishaa_time_offset_key</item>
+    </string-array>
+
+    <string-array name="organizations_entries">
+        <item>اثنا عشرية</item>
+        <item>جامعة العلوم الإسلامية بكراتشى</item>
+        <item>الاتحاد الإسلامي بأمريكا الشمالية</item>
+        <item>رابطة العالم الإسلامي</item>
+        <item>جامعة أم القرى</item>
+        <item>الهيئة العامة المصرية للمساحة</item>
+        <item>معهد الجيوفيزياء ، جامعة طهران</item>
+    </string-array>
+    <string-array name="organizations_entryvalues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="asr_madhab">
+        <item>مذهب الجمهور</item>
+        <item>المذهب الحنفي</item>
+    </string-array>
+    <string-array name="asr_madhab_int">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <declare-styleable name="SeekBarPreference">
+        <attr name="seekbar_max" format="integer" />
+        <attr name="suffix" format="string" />
+        <attr name="message" format="string" />
+    </declare-styleable>
+
+</resources>

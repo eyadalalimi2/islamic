@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.eyadalalimi.islamic.pro.nbprayer.preferences.SeekBarPreference
+        android:defaultValue="0"
+        android:key="@string/pref_fajr_time_offset_key"
+        android:title="@string/fajr_long_name"
+
+        app:seekbar_max="60" />
+
+    <com.eyadalalimi.islamic.pro.nbprayer.preferences.SeekBarPreference
+        android:defaultValue="0"
+        android:key="@string/pref_sunrise_time_offset_key"
+        android:title="@string/sunrise_long_name"
+        app:seekbar_max="60" />
+
+    <com.eyadalalimi.islamic.pro.nbprayer.preferences.SeekBarPreference
+        android:defaultValue="0"
+        android:key="@string/pref_duhr_time_offset_key"
+        android:title="@string/dohr_long_name"
+        app:seekbar_max="60" />
+
+    <com.eyadalalimi.islamic.pro.nbprayer.preferences.SeekBarPreference
+        android:defaultValue="0"
+        android:key="@string/pref_asr_time_offset_key"
+        android:title="@string/asr_long_name"
+        app:seekbar_max="60" />
+
+    <com.eyadalalimi.islamic.pro.nbprayer.preferences.SeekBarPreference
+        android:defaultValue="0"
+        android:key="@string/pref_maghrib_time_offset_key"
+        android:title="@string/maghrib_long_name"
+        app:seekbar_max="60" />
+
+    <com.eyadalalimi.islamic.pro.nbprayer.preferences.SeekBarPreference
+        android:defaultValue="0"
+        android:key="@string/pref_ishaa_time_offset_key"
+        android:title="@string/ishaa_long_name"
+        app:seekbar_max="60" />
+</PreferenceScreen>

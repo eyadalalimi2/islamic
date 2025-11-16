@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "145590998388",
+    "project_id": "islamic-19f7a",
+    "storage_bucket": "islamic-19f7a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145590998388:android:2a8536d120b80aeddd0821",
+        "android_client_info": {
+          "package_name": "com.eyadalalimi.islamic.pro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVcO7cJGVpBY_0Fttjmoo8VJJtB-uoeVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme"
+        android:name="com.eyadalalimi.islamic.pro.MyApp"
+        tools:ignore="UnusedAttribute">
+
+        <activity
+            android:name="com.eyadalalimi.islamic.pro.MainActivityFist"
+            android:exported="false"
+            tools:ignore="IntentFilterExportedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.eyadalalimi.islamic.pro.qurankarim"
+            android:label="@string/app"
+            android:exported="false"/>
+        <activity
+            android:name="com.eyadalalimi.islamic.pro.Adkar_det"
+            android:label="@string/da"
+            android:exported="false"/>
+        <activity
+            android:name="com.eyadalalimi.islamic.pro.managerdb"
+            android:label="@string/title_activity_managerdb"
+            android:screenOrientation="fullSensor"
+            android:exported="false"/>
+        <activity
+            android:name="com.eyadalalimi.islamic.pro.HijriActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"/>
+        <activity
+            android:name="com.eyadalalimi.islamic.pro.ResitesName"
+            android:label="@string/app"
+            android:screenOrientation="fullSensor"
+            android:exported="false"/>
+        <activity android:name="com.eyadalalimi.islamic.pro.Sellings"
+            android:exported="false"/>
+        <activity
+            android:name="com.eyadalalimi.islamic.pro.AyaList"
+            android:label="@string/title_activity_aya_list"
+            android:screenOrientation="fullSensor"
+            android:exported="false"/>
+        <activity
+            android:name="com.eyadalalimi.islamic.pro.MyAdkarActivity"
+            android:label="@string/da"
+            android:exported="false"/>
+        <activity
+            android:name="com.eyadalalimi.islamic.pro.nbprayer.PrayerSettingsActivity"
+            android:exported="false" />
+        <activity android:name="com.eyadalalimi.islamic.pro.splash_screen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.eyadalalimi.islamic.pro.Subha"
+            android:label="@string/subhaaaa"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name="com.eyadalalimi.islamic.pro.asmaallah"
+            android:label="@string/asmaaallah"
+            android:exported="false"/>
+        <activity android:name="com.eyadalalimi.islamic.pro.Stories"
+            android:label="@string/stories2"
+            android:exported="false"/>
+        <activity android:name="com.eyadalalimi.islamic.pro.anbiya"
+            android:label="@string/qissaanbiya"
+            android:exported="false"/>
+        <activity android:name="com.eyadalalimi.islamic.pro.sahaba"
+            android:label="@string/qissassahaba"
+            android:exported="false"/>
+        <activity android:name="com.eyadalalimi.islamic.pro.Moajizat"
+            android:label="@string/mo3jizat"
+            android:exported="false"/>
+        <activity android:name="com.eyadalalimi.islamic.pro.Islamic"
+            android:label="@string/qissasislamic"
+            android:exported="false"/>
+        <activity android:name="com.eyadalalimi.islamic.pro.Lire_stories"
+            android:label="@string/stories2"
+            android:exported="false"/>
+        <activity android:name="com.eyadalalimi.islamic.pro.Lira_anbiyaa"
+            android:label="@string/qissassahaba"
+            android:exported="false"></activity>
+        <activity android:name="com.eyadalalimi.islamic.pro.nbautoazkar.Azkar_Auto_Activity"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="GoogleAppIndexingWarning"
+            android:exported="false"/>
+        <receiver android:name="com.eyadalalimi.islamic.pro.nbautoazkar.ReciverNoti" />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbnawawi.NawawiyaActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false" />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbsahihboukhari.BukhariActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"  />
+        <activity android:name="com.eyadalalimi.islamic.pro.other.IndexActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"   />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbprayer.PrayerActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"    />
+        <receiver android:name="com.eyadalalimi.islamic.pro.nbprayer.PrayerReceiver" />
+        <provider
+            android:name="com.eyadalalimi.islamic.pro.nbprayer.AssetsProvider"
+            android:authorities="com.eyadalalimi.islamic.pro"
+            android:exported="true"
+            android:grantUriPermissions="true" />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbholyquran.QuranActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"  />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbholyquran.QuranIndexActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"   />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbholyquran.QuranSearchActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"  />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbholyquran.TextActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"  />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbholyquran.TafsirActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"  />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbholyquran.E3rabActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"  />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbholyquran.M3aniActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"    />
+        <service android:name="com.eyadalalimi.islamic.pro.LocalService" />
+        <activity
+            android:name="com.eyadalalimi.islamic.pro.CompassActivity"
+            android:label="@string/qibla"
+            android:screenOrientation="fullSensor"
+            android:exported="false"     />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbmessage.activi.mainactivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"  />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbmessage.activi.activitymsg"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"    />
+        <activity android:name="com.eyadalalimi.islamic.pro.nbmessage.activi.activity_editsection"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"   />
+        <activity
+            android:name="com.eyadalalimi.islamic.pro.nbmessage.activi.activity_color"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:exported="false"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/aplication_admob_id" />
+
+    </application>
+
+</manifest>

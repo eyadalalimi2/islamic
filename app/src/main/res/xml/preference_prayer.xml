@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        android:key="@string/pref_city_key"
+        android:title="@string/pref_city_title"
+        />
+
+    <ListPreference
+        android:defaultValue="@string/default_organization"
+        android:entries="@array/organizations_entries"
+        android:entryValues="@array/organizations_entryvalues"
+        android:key="@string/pref_organization_key"
+        android:summary="@string/pref_organization_summary"
+        android:title="@string/pref_organization_title" />
+
+    <ListPreference
+        android:defaultValue="@string/default_asr_madhab"
+        android:entries="@array/asr_madhab"
+        android:entryValues="@array/asr_madhab_int"
+        android:key="@string/pref_asr_madhab_key"
+        android:summary="@string/pref_asr_madhab_summary"
+        android:title="@string/pref_asr_madhab_title" />
+
+    <Preference
+        android:key="@string/pref_offsets_settings_key"
+        android:title="@string/pref_offsets_settings_title"
+        app:isPreferenceVisible="false"/>
+</PreferenceScreen>

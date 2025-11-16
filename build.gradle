@@ -1,0 +1,30 @@
+// ملف البناء الجذري للمشروع
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        // لا نحتاج JitPack هنا لأن الاعتمادات العادية (وليس Plugins) فقط هي التي تستخدمه
+    }
+    dependencies {
+        // نفس النسخة التي تستخدمها الآن (يحصل فقط تحذير مع compileSdk 35 وليس خطأ)
+        classpath 'com.android.tools.build:gradle:8.13.1'
+
+        // إضافة Google Services Plugin (مطلوب لـ google-services.json)
+        classpath 'com.google.gms:google-services:4.4.4'
+    }
+}
+
+// هنا نضيف JitPack حتى يجد مكتبة material-icon-lib
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }  // المستودع الذي يحتوي com.github.code-mc:material-icon-lib
+    }
+}
+
+// مهمة تنظيف المشروع
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,80 @@
+// build.gradle الخاص بموديول التطبيق (app) بعد إضافة namespace
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    // ✅ أضف هذه السطر لتعريف مساحة الأسماء
+    namespace 'com.eyadalalimi.islamic.pro'
+
+    compileSdkVersion 35
+
+    defaultConfig {
+        applicationId "com.eyadalalimi.islamic.pro"
+        minSdkVersion 23
+        targetSdkVersion 35
+
+        versionCode 2
+        versionName "2.0"
+
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            debuggable true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+        // dataBinding true  // فعّلها فقط إذا كان مشروعك يستخدم DataBinding
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Firebase باستخدام BoM
+    implementation platform('com.google.firebase:firebase-bom:34.6.0')
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // إعلانات Google
+    implementation 'com.google.android.gms:play-services-ads:24.7.0'
+
+    // مكتبة الموافقة UMP
+    implementation 'com.google.android.ump:user-messaging-platform:4.0.0'
+
+    // AndroidX ومكونات واجهة المستخدم
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.preference:preference:1.2.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // مكتبة الأيقونات من JitPack (مع إضافة jitpack في build.gradle الجذري)
+    implementation 'com.github.code-mc:material-icon-lib:1.1.5'
+
+    // مكتبة الوقت
+    implementation 'joda-time:joda-time:2.14.0'
+
+    // WorkManager
+    implementation 'androidx.work:work-runtime:2.11.0'
+
+    // Facebook Audience Network
+    implementation 'com.facebook.android:audience-network-sdk:6.21.0'
+
+    // اختبارات
+    testImplementation 'junit:junit:4.13.2'
+}

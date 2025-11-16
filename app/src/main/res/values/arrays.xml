@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="tafsir_books">
+        <item>@string/tafsir_moysar</item>
+        <item>@string/tafsir_saadi</item>
+        <item>@string/tafsir_baghawi</item>
+    </string-array>
+    <string-array name="nawawiya_40">
+        <item>الحديث الأول</item>
+        <item>الحديث الثاني</item>
+        <item>الحديث الثالث</item>
+        <item>الحديث الرابع</item>
+        <item>الحديث الخامس</item>
+        <item>الحديث السادس</item>
+        <item>الحديث السابع</item>
+        <item>الحديث الثامن</item>
+        <item>الحديث التاسع</item>
+        <item>الحديث العاشر</item>
+        <item>الحديث الحادي عشر</item>
+        <item>الحديث الثاني عشر</item>
+        <item>الحديث الثالث عشر</item>
+        <item>الحديث الرابع عشر</item>
+        <item>الحديث الخامس عشر</item>
+        <item>الحديث السادس عشر</item>
+        <item>الحديث السابع عشر</item>
+        <item>الحديث الثامن عشر</item>
+        <item>الحديث التاسع عشر</item>
+        <item>الحديث العشرون</item>
+        <item>الحديث الحادي والعشرون</item>
+        <item>الحديث الثاني والعشرون</item>
+        <item>الحديث الثالث والعشرون</item>
+        <item>الحديث الرابع والعشرون</item>
+        <item>الحديث الخامس والعشرون</item>
+        <item>الحديث السادس والعشرون</item>
+        <item>الحديث السابع والعشرون</item>
+        <item>الحديث الثامن والعشرون</item>
+        <item>الحديث التاسع والعشرون</item>
+        <item>الحديث الثلاثون</item>
+        <item>الحديث الحادي والثلاثون</item>
+        <item>الحديث الثاني والثلاثون</item>
+        <item>الحديث الثالث والثلاثون</item>
+        <item>الحديث الرابع والثلاثون</item>
+        <item>الحديث الخامس والثلاثون</item>
+        <item>الحديث السادس والثلاثون</item>
+        <item>الحديث السابع والثلاثون</item>
+        <item>الحديث الثامن والثلاثون</item>
+        <item>الحديث التاسع والثلاثون</item>
+        <item>الحديث الأربعون</item>
+        <item>الحديث الحادي والأربعون</item>
+    </string-array>
+
+    <string-array name="wd_names">
+        <item>@string/wd_name_sun</item>
+        <item>@string/wd_name_mon</item>
+        <item>@string/wd_name_tue</item>
+        <item>@string/wd_name_wed</item>
+        <item>@string/wd_name_thu</item>
+        <item>@string/wd_name_fri</item>
+        <item>@string/wd_name_sat</item>
+    </string-array>
+
+    <string-array name="ah_name">
+        <item>@string/ah_name_muh</item>
+        <item>@string/ah_name_saf</item>
+        <item>@string/ah_name_rabi_1</item>
+        <item>@string/ah_name_rabi_2</item>
+        <item>@string/ah_name_jum_1</item>
+        <item>@string/ah_name_jum_2</item>
+        <item>@string/ah_name_raj</item>
+        <item>@string/ah_name_shn</item>
+        <item>@string/ah_name_ram</item>
+        <item>@string/ah_name_shw</item>
+        <item>@string/ah_name_qada_1</item>
+        <item>@string/ah_name_qada_2</item>
+    </string-array>
+
+
+
+</resources>
