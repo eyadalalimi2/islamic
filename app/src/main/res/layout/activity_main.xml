@@ -6,56 +6,61 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainactivity"
     android:layout_height="match_parent"
-    android:background="@drawable/mybgapp"
+    android:background="@drawable/back_home"
     android:layout_weight="1"
     android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_marginTop="-70dp"
-        android:layout_height="250dp">
+        android:layout_height="207dp"
+        android:layout_marginTop="-70dp">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:background="@drawable/bg"/>
+            android:layout_height="210dp"
+            android:background="@drawable/bg" />
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
+            android:layout_height="120dp"
             android:layout_marginTop="75dp"
-            android:layout_height="120dp">
+            android:orientation="vertical">
 
             <TextView
-                android:text="دعاء اليوم"
+                android:id="@+id/do3aalyoum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/do3aalyoum"
-                android:gravity="center"
-                android:fontFamily="@font/the_sans"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="5dp"
-                android:textSize="25dp"
+                android:fontFamily="@font/the_sans"
+                android:gravity="center"
+                android:text="دعاء اليوم"
                 android:textColor="@color/red"
-                />
+                android:textSize="25dp" />
 
             <TextView
                 android:id="@+id/dou3a"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="51dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
                 android:fontFamily="@font/the_sans"
                 android:gravity="center"
                 android:text="اجعل هذه الأذكار رفيقك أينما ذهبت"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="15dp" />
         </LinearLayout>
 
     </FrameLayout>
 
-
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mybg01" />
 
 
     <androidx.core.widget.NestedScrollView
