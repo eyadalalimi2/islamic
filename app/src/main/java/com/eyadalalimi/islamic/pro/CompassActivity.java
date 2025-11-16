@@ -1,5 +1,7 @@
 package com.eyadalalimi.islamic.pro;
 
+import static android.view.View.INVISIBLE;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
@@ -7,9 +9,6 @@ import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,14 +21,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-
-import static android.view.View.INVISIBLE;
 
 
 public class CompassActivity extends AppCompatActivity {
@@ -65,10 +65,10 @@ public class CompassActivity extends AppCompatActivity {
         gps = new GPSTracker(this);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         //////////////////////////////////////////
-        arrowViewQiblat = (ImageView) findViewById(R.id.main_image_qiblat);
-        imageDial = (ImageView) findViewById(R.id.main_image_dial);
-        text_atas = (TextView) findViewById(R.id.teks_atas);
-        text_bawah = (TextView) findViewById(R.id.teks_bawah);
+        arrowViewQiblat = findViewById(R.id.main_image_qiblat);
+        imageDial = findViewById(R.id.main_image_dial);
+        text_atas = findViewById(R.id.teks_atas);
+        text_bawah = findViewById(R.id.teks_bawah);
 
         //////////////////////////////////////////
         arrowViewQiblat .setVisibility(INVISIBLE);
@@ -204,7 +204,7 @@ public class CompassActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
+                                           String[] permissions, int[] grantResults) {
         switch (requestCode) {
             case 1: {
                 // If request is cancelled, the result arrays are empty.
@@ -222,7 +222,6 @@ public class CompassActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.toast_permission_required), Toast.LENGTH_LONG).show();
                     finish();
                 }
-                return;
             }
             // other 'case' lines to check for other
             // permissions this app might request
@@ -284,14 +283,12 @@ public class CompassActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
-        switch (item.getItemId()) {
-            case R.id.gps:
-                //logout code
-                fetch_GPS();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.gps) {
+            //logout code
+            fetch_GPS();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     public void fetch_GPS(){
