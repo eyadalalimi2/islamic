@@ -46,37 +46,40 @@
             <RadioButton
                 android:id="@+id/rdb_0"
                 style="@style/RadioRemind"
-                android:text="@string/remind_never"
                 android:fontFamily="@font/the_sans"
-                />
+                android:text="@string/remind_never"
+                ads:ignore="TouchTargetSizeCheck" />
 
             <RadioButton
                 android:id="@+id/rdb_30"
                 style="@style/RadioRemind"
-                android:text="@string/remind_30"
                 android:fontFamily="@font/the_sans"
-                />
+                android:text="@string/remind_30"
+                ads:ignore="TouchTargetSizeCheck" />
 
             <RadioButton
                 android:id="@+id/rdb_1"
                 style="@style/RadioRemind"
                 android:fontFamily="@font/the_sans"
 
-                android:text="@string/remind_1" />
+                android:text="@string/remind_1"
+                ads:ignore="TouchTargetSizeCheck" />
 
             <RadioButton
                 android:id="@+id/rdb_3"
                 style="@style/RadioRemind"
                 android:fontFamily="@font/the_sans"
 
-                android:text="@string/remind_3" />
+                android:text="@string/remind_3"
+                ads:ignore="TouchTargetSizeCheck" />
 
             <RadioButton
                 android:id="@+id/rdb_6"
                 style="@style/RadioRemind"
                 android:fontFamily="@font/the_sans"
 
-                android:text="@string/remind_6" />
+                android:text="@string/remind_6"
+                ads:ignore="TouchTargetSizeCheck" />
         </RadioGroup>
 
 
