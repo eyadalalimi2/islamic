@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:appns="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
@@ -112,7 +111,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_margin="12dp"
-                            android:src="@drawable/ic_azkar"/>
+                            android:src="@drawable/myicon03" />
 
                         <TextView
                             android:id="@+id/azkar_label"
@@ -165,7 +164,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_margin="12dp"
-                            android:src="@drawable/ic_quran"/>
+                            android:src="@drawable/myicon01" />
 
                         <TextView
                             android:id="@+id/quran_label21"
@@ -225,7 +224,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_margin="12dp"
-                            android:src="@drawable/ic_categories"/>
+                            android:src="@drawable/myicon02" />
 
                         <TextView
                             android:id="@+id/category_label"
@@ -276,7 +275,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_margin="12dp"
-                            android:src="@drawable/ic_main_remind"/>
+                            android:src="@drawable/myicon04" />
 
                         <TextView
                             android:id="@+id/reminder_label"
@@ -336,7 +335,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_margin="12dp"
-                            android:src="@drawable/ic_occasions"/>
+                            android:src="@drawable/myicon07" />
 
                         <TextView
                             android:id="@+id/occasions_label"
@@ -393,7 +392,7 @@
                             android:layout_marginEnd="12dp"
                             android:layout_marginRight="12dp"
                             android:layout_marginBottom="12dp"
-                            android:src="@drawable/ic_main_sebha" />
+                            android:src="@drawable/myicon08" />
 
                         <TextView
                             android:id="@+id/favorite_label"
@@ -459,7 +458,7 @@
                             android:layout_marginEnd="12dp"
                             android:layout_marginRight="12dp"
                             android:layout_marginBottom="12dp"
-                            android:src="@drawable/ic_main_daawat" />
+                            android:src="@drawable/myicon05" />
 
                         <TextView
                             android:id="@+id/azkar_label1"
@@ -516,7 +515,7 @@
                             android:layout_marginEnd="12dp"
                             android:layout_marginRight="12dp"
                             android:layout_marginBottom="12dp"
-                            android:src="@drawable/ic_qiblah" />
+                            android:src="@drawable/myicon06" />
 
                         <TextView
                             android:id="@+id/quran_label2"
@@ -585,7 +584,7 @@
                             android:layout_marginEnd="12dp"
                             android:layout_marginRight="12dp"
                             android:layout_marginBottom="12dp"
-                            android:src="@drawable/ic_msg" />
+                            android:src="@drawable/myicon11" />
 
                         <TextView
                             android:id="@+id/azkar_label145"
@@ -642,7 +641,7 @@
                             android:layout_marginEnd="12dp"
                             android:layout_marginRight="12dp"
                             android:layout_marginBottom="12dp"
-                            android:src="@drawable/ic_main_albukhari" />
+                            android:src="@drawable/myicon10" />
 
                         <TextView
                             android:id="@+id/quran_label42"
@@ -710,7 +709,7 @@
                             android:layout_marginEnd="12dp"
                             android:layout_marginRight="12dp"
                             android:layout_marginBottom="12dp"
-                            android:src="@drawable/ic_main_nawawiya"
+                            android:src="@drawable/myicon09"
                             tools:ignore="RtlCompat" />
 
                         <TextView
@@ -767,7 +766,7 @@
                             android:layout_marginEnd="12dp"
                             android:layout_marginRight="12dp"
                             android:layout_marginBottom="12dp"
-                            android:src="@drawable/ic_main_figh2" />
+                            android:src="@drawable/myicon12" />
 
                         <TextView
                             android:id="@+id/reminder_label46"
@@ -837,7 +836,7 @@
                             android:layout_marginEnd="12dp"
                             android:layout_marginRight="12dp"
                             android:layout_marginBottom="12dp"
-                            android:src="@drawable/ic_main_hijri"
+                            android:src="@drawable/myicon13"
                             tools:ignore="RtlCompat" />
 
                         <TextView
@@ -895,7 +894,7 @@
                             android:layout_marginEnd="12dp"
                             android:layout_marginRight="12dp"
                             android:layout_marginBottom="12dp"
-                            android:src="@drawable/ic_main_library" />
+                            android:src="@drawable/myicon14" />
 
                         <TextView
                             android:id="@+id/reminder_label4674"
