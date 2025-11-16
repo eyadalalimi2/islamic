@@ -23,22 +23,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.eyadalalimi.islamic.pro.nbautoazkar.Azkar_Auto_Activity;
-import com.eyadalalimi.islamic.pro.nbsahihboukhari.DBManager;
-import com.eyadalalimi.islamic.pro.nbmessage.activi.mainactivity;
-import com.eyadalalimi.islamic.pro.other.Arrays;
-import com.eyadalalimi.islamic.pro.other.IndexActivity;
-import com.eyadalalimi.islamic.pro.nbprayer.PrayerActivity;
-import com.eyadalalimi.islamic.pro.nbprayer.PrayerUtil;
 import com.eyadalalimi.islamic.pro.nbholyquran.E3rabActivity;
 import com.eyadalalimi.islamic.pro.nbholyquran.M3aniActivity;
 import com.eyadalalimi.islamic.pro.nbholyquran.MuslimDialog;
 import com.eyadalalimi.islamic.pro.nbholyquran.QuranActivity;
 import com.eyadalalimi.islamic.pro.nbholyquran.TafsirActivity;
-
+import com.eyadalalimi.islamic.pro.nbmessage.activi.mainactivity;
+import com.eyadalalimi.islamic.pro.nbprayer.PrayerActivity;
+import com.eyadalalimi.islamic.pro.nbprayer.PrayerUtil;
+import com.eyadalalimi.islamic.pro.nbsahihboukhari.DBManager;
+import com.eyadalalimi.islamic.pro.other.Arrays;
+import com.eyadalalimi.islamic.pro.other.IndexActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
@@ -51,7 +50,7 @@ import java.util.Random;
 
 public class MainActivityFist extends AppCompatActivity implements DialogInterface.OnClickListener {
     String[] mTestArray;
-    private Context context = this;
+    private final Context context = this;
     public static final String TAG = "Main_Log";
     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     Date date = new Date();
@@ -291,58 +290,32 @@ public class MainActivityFist extends AppCompatActivity implements DialogInterfa
         TextView text = dialog.findViewById(R.id.text);
         text.setText("هل تريد الخروج من التطبيق");
         dialog.show();
-        Button yesbutton = (Button) dialog.findViewById(R.id.yes_bt);
+        Button yesbutton = dialog.findViewById(R.id.yes_bt);
         // if button is clicked, close the custom dialog
         yesbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                finish();
-
+                MainActivityFist.super.onBackPressed();
                 dialog.dismiss();
-
             }
         });
 
 
-        Button nobutton = (Button) dialog.findViewById(R.id.no_bt);
+        Button nobutton = dialog.findViewById(R.id.no_bt);
         // if button is clicked, close the custom dialog
         nobutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 dialog.dismiss();
-
             }
         });
-
-
-
     }
+
     private void showQuranDialog() {
         MuslimDialog muslimDialog = new MuslimDialog(this);
         muslimDialog.setCategories(Arrays.getQuranItemList());
         muslimDialog.setListener(this);
         muslimDialog.show();
-    }
-    @Override
-    public void onClick(DialogInterface dialog, int which) {
-        switch (which) {
-            case R.id.cat_quran_item_read:
-                startActivity(new Intent(this, QuranActivity.class));
-                break;
-            case R.id.cat_quran_item_tafsir:
-                startActivity(new Intent(this, TafsirActivity.class));
-                break;
-            case R.id.cat_quran_item_e3rab:
-                startActivity(new Intent(this, E3rabActivity.class));
-                break;
-            case R.id.cat_quran_item_m3ani:
-                startActivity(new Intent(this, M3aniActivity.class));
-                break;
-
-        }
-        dialog.dismiss();
     }
 
     private boolean canDrawOverlays() {
@@ -370,7 +343,7 @@ public class MainActivityFist extends AppCompatActivity implements DialogInterfa
         TextView text = dialog.findViewById(R.id.text);
         text.setText(R.string.request_draw_message);
         dialog.show();
-        Button yesbutton = (Button) dialog.findViewById(R.id.yes_bt);
+        Button yesbutton = dialog.findViewById(R.id.yes_bt);
         yesbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -378,7 +351,7 @@ public class MainActivityFist extends AppCompatActivity implements DialogInterfa
                 dialog.dismiss();
             }
         });
-        Button nobutton = (Button) dialog.findViewById(R.id.no_bt);
+        Button nobutton = dialog.findViewById(R.id.no_bt);
         nobutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -388,4 +361,3 @@ public class MainActivityFist extends AppCompatActivity implements DialogInterfa
     }
 
 }
-
