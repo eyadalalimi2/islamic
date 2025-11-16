@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- لون الخلفية داخل البطاقة -->
+    <solid android:color="#5D4A22" />
+
+    <!-- حواف مستديرة -->
+    <corners android:radius="20dp" />
+
+    <!-- إطار ذهبي حول البطاقة -->
+    <stroke
+        android:width="2dp"
+        android:color="#F4C038" />
+
+    <!-- مسافة داخلية بسيطة -->
+    <padding
+        android:bottom="8dp"
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp" />
+</shape>
