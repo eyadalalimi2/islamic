@@ -19,9 +19,9 @@ public class splash_screen extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        img_logo=(ImageView)findViewById(R.id.imageView1);
-        loading=(ImageView)findViewById(R.id.imageView45);
-        rotation = AnimationUtils.loadAnimation(splash_screen.this, R.anim.rotate2);
+        img_logo= findViewById(R.id.imageView1);
+        loading= findViewById(R.id.imageView45);
+        rotation = AnimationUtils.loadAnimation(splash_screen.this, R.anim.rotate); // Use the new animation
         rotation2 = AnimationUtils.loadAnimation(splash_screen.this, R.anim.alpha);
         loading.startAnimation(rotation);
         img_logo.startAnimation(rotation2);
