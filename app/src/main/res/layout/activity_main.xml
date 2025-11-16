@@ -60,12 +60,10 @@
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="match_parent"
         android:clipToPadding="false"
         android:layout_weight="1"
         android:layout_marginTop="-30dp"
-
         android:background="@drawable/mybg02"
         android:scrollbars="none">
 
@@ -784,7 +782,6 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_weight="0"
-            android:visibility="gone"
             ads:adSize="BANNER"
             ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
     </LinearLayout>
