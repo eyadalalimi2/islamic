@@ -1,22 +1,17 @@
 package com.eyadalalimi.islamic.pro;
 
 
+import static com.eyadalalimi.islamic.pro.AyaList.isConnectingToInternet;
+
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -28,8 +23,14 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import static com.eyadalalimi.islamic.pro.AyaList.isConnectingToInternet;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class managerdb extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
     private ImageButton btnPlay;
@@ -47,8 +48,7 @@ public class managerdb extends AppCompatActivity implements SeekBar.OnSeekBarCha
     private LinearLayout layoutads;
     // Media Player
     // Handler to update UI timer, progress bar etc,.
-    private Handler mHandler = new Handler();
-    ;
+    private final Handler mHandler = new Handler();
     private Utilities utils;
 
     private int currentSongIndex = 0;
@@ -59,8 +59,12 @@ public class managerdb extends AppCompatActivity implements SeekBar.OnSeekBarCha
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_managerdb);
-        MobileAds.initialize(getApplicationContext(),getString(R.string.aplication_admob_id));
-        AdView mAdView = (AdView) findViewById(R.id.adView);
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         Bundle b = getIntent().getExtras();
@@ -76,17 +80,17 @@ public class managerdb extends AppCompatActivity implements SeekBar.OnSeekBarCha
 
         }
         // All player buttons
-        btnPlay = (ImageButton) findViewById(R.id.btnPlay);
-        btnForward = (ImageButton) findViewById(R.id.btnForward);
-        btnBackward = (ImageButton) findViewById(R.id.btnBackward);
-        btnNext = (ImageButton) findViewById(R.id.btnNext);
-        btnPrevious = (ImageButton) findViewById(R.id.btnPrevious);
-        btnRepeat = (ImageButton) findViewById(R.id.btnRepeat);
-        btnShuffle = (ImageButton) findViewById(R.id.btnShuffle);
-        songProgressBar = (SeekBar) findViewById(R.id.songProgressBar);
-        songTitleLabel = (TextView) findViewById(R.id.songTitle);
-        songCurrentDurationLabel = (TextView) findViewById(R.id.songCurrentDurationLabel);
-        songTotalDurationLabel = (TextView) findViewById(R.id.songTotalDurationLabel);
+        btnPlay = findViewById(R.id.btnPlay);
+        btnForward = findViewById(R.id.btnForward);
+        btnBackward = findViewById(R.id.btnBackward);
+        btnNext = findViewById(R.id.btnNext);
+        btnPrevious = findViewById(R.id.btnPrevious);
+        btnRepeat = findViewById(R.id.btnRepeat);
+        btnShuffle = findViewById(R.id.btnShuffle);
+        songProgressBar = findViewById(R.id.songProgressBar);
+        songTitleLabel = findViewById(R.id.songTitle);
+        songCurrentDurationLabel = findViewById(R.id.songCurrentDurationLabel);
+        songTotalDurationLabel = findViewById(R.id.songTotalDurationLabel);
 
         // Mediaplayer
         utils = new Utilities();
@@ -253,7 +257,7 @@ public class managerdb extends AppCompatActivity implements SeekBar.OnSeekBarCha
 
     // Our handler for received Intents. This will be called whenever an Intent
 // with an action named "custom-event-name" is broadcasted.
-    private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             // Get extra data included in the Intent
@@ -268,7 +272,7 @@ public class managerdb extends AppCompatActivity implements SeekBar.OnSeekBarCha
     }
 
     private LocalService mBoundService;
-    private ServiceConnection mConnection = new ServiceConnection() {
+    private final ServiceConnection mConnection = new ServiceConnection() {
         public void onServiceConnected(ComponentName className, IBinder service) {
             // This is called when the connection with the service has been
             // established, giving us the service object we can use to
@@ -371,6 +375,7 @@ public class managerdb extends AppCompatActivity implements SeekBar.OnSeekBarCha
 
     }
 
+
     /**
      * Function to play a song
      *
@@ -394,7 +399,7 @@ public class managerdb extends AppCompatActivity implements SeekBar.OnSeekBarCha
     /**
      * Background Runnable thread
      */
-    private Runnable mUpdateTimeTask = new Runnable() {
+    private final Runnable mUpdateTimeTask = new Runnable() {
         public void run() {
 
             try {
@@ -405,12 +410,12 @@ public class managerdb extends AppCompatActivity implements SeekBar.OnSeekBarCha
                     long currentDuration = mBoundService.getCurrentPosition();
 
                     // Displaying Total Duration time
-                    songTotalDurationLabel.setText("" + utils.milliSecondsToTimer(totalDuration));
+                    songTotalDurationLabel.setText(utils.milliSecondsToTimer(totalDuration));
                     // Displaying time completed playing
-                    songCurrentDurationLabel.setText("" + utils.milliSecondsToTimer(currentDuration));
+                    songCurrentDurationLabel.setText(utils.milliSecondsToTimer(currentDuration));
 
                     // Updating progress bar
-                    int progress = (int) (utils.getProgressPercentage(currentDuration, totalDuration));
+                    int progress = utils.getProgressPercentage(currentDuration, totalDuration);
                     //Log.d("Progress", ""+progress);
                     songProgressBar.setProgress(progress);
 

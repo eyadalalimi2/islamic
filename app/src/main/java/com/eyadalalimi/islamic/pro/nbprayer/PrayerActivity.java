@@ -23,7 +23,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-
 import com.eyadalalimi.islamic.pro.R;
 import com.eyadalalimi.islamic.pro.other.ActivityUtils;
 
@@ -43,7 +42,7 @@ public class PrayerActivity extends AppCompatActivity {
     public static final int ACCESS_COURSE_LOCATION_CODE = 105;
     //endregion
     //region Variables
-    private AppCompatActivity activity = this;
+    private final AppCompatActivity activity = this;
     private GPSTracker gps;
     private double latitude;
     private double longitude;
@@ -111,17 +110,16 @@ public class PrayerActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.gps:
-                getLocation(true, true);
-                Toast.makeText(this, "لقد تم تحديث موقعك و مواقيت الصلاة", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.action_settings:
-                startActivity(new Intent(this, PrayerSettingsActivity.class));
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int id = item.getItemId();
+        if (id == R.id.gps) {
+            getLocation(true, true);
+            Toast.makeText(this, "لقد تم تحديث موقعك و مواقيت الصلاة", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (id == R.id.action_settings) {
+            startActivity(new Intent(this, PrayerSettingsActivity.class));
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -201,14 +199,12 @@ public class PrayerActivity extends AppCompatActivity {
         }
         ArrayList<TextView> labelViews = getPrayerLabelViews();
         Pair<Integer, String> remainingTime = PrayerUtil.getRemainingPrayerTime(this);
-        String nextPrayer = new StringBuilder()
-                .append(getString(getPrayerLabels().get(remainingTime.first)))
-                .append(" ")
-                .append(" ")
-                .append(" ")
-                .append(" ")
-                .append(remainingTime.second)
-                .toString();
+        String nextPrayer = getString(getPrayerLabels().get(remainingTime.first)) +
+                " " +
+                " " +
+                " " +
+                " " +
+                remainingTime.second;
         if (labelViews.get(remainingTime.first) != null)
             labelViews.get(remainingTime.first).setText(nextPrayer);
 
@@ -216,25 +212,25 @@ public class PrayerActivity extends AppCompatActivity {
 
     private ArrayList<TextView> getPrayerViews() {
         ArrayList<TextView> views = new ArrayList<>();
-        views.add((TextView) findViewById(R.id.tv_prayer_fajr));
-        views.add((TextView) findViewById(R.id.tv_prayer_sunrise));
-        views.add((TextView) findViewById(R.id.tv_prayer_dhuhr));
-        views.add((TextView) findViewById(R.id.tv_prayer_asr));
+        views.add(findViewById(R.id.tv_prayer_fajr));
+        views.add(findViewById(R.id.tv_prayer_sunrise));
+        views.add(findViewById(R.id.tv_prayer_dhuhr));
+        views.add(findViewById(R.id.tv_prayer_asr));
         views.add(null);
-        views.add((TextView) findViewById(R.id.tv_prayer_maghribt));
-        views.add((TextView) findViewById(R.id.tv_prayer_isha));
+        views.add(findViewById(R.id.tv_prayer_maghribt));
+        views.add(findViewById(R.id.tv_prayer_isha));
         return views;
     }
 
     private ArrayList<TextView> getPrayerLabelViews() {
         ArrayList<TextView> views = new ArrayList<>();
-        views.add((TextView) findViewById(R.id.tv_prayer_fajr_label));
-        views.add((TextView) findViewById(R.id.tv_prayer_sunrise_label));
-        views.add((TextView) findViewById(R.id.tv_prayer_dhuhr_label));
-        views.add((TextView) findViewById(R.id.tv_prayer_asr_label));
+        views.add(findViewById(R.id.tv_prayer_fajr_label));
+        views.add(findViewById(R.id.tv_prayer_sunrise_label));
+        views.add(findViewById(R.id.tv_prayer_dhuhr_label));
+        views.add(findViewById(R.id.tv_prayer_asr_label));
         views.add(null);
-        views.add((TextView) findViewById(R.id.tv_prayer_maghribt_label));
-        views.add((TextView) findViewById(R.id.tv_prayer_isha_label));
+        views.add(findViewById(R.id.tv_prayer_maghribt_label));
+        views.add(findViewById(R.id.tv_prayer_isha_label));
         return views;
     }
 

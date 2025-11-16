@@ -3,10 +3,6 @@ package com.eyadalalimi.islamic.pro.nbholyquran;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,10 +12,15 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
+
 import com.eyadalalimi.islamic.pro.R;
+import com.eyadalalimi.islamic.pro.nbprayer.PreferenceUtil;
 import com.eyadalalimi.islamic.pro.nbsahihboukhari.DBManager;
 import com.eyadalalimi.islamic.pro.other.Arrays;
-import com.eyadalalimi.islamic.pro.nbprayer.PreferenceUtil;
 
 import java.util.List;
 
@@ -119,17 +120,16 @@ public class QuranActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_list:
-                showQuranDialog();
-                return true;
-            case R.id.action_search:
-                startActivityForResult(new Intent
-                        (this, QuranSearchActivity.class), PICK_AYA);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int id = item.getItemId();
+        if (id == R.id.action_list) {
+            showQuranDialog();
+            return true;
+        } else if (id == R.id.action_search) {
+            startActivityForResult(new Intent
+                    (this, QuranSearchActivity.class), PICK_AYA);
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -147,31 +147,22 @@ public class QuranActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(DialogInterface dialog, int which) {
-        switch (which) {
-            case R.id.cat_quran_item_index:
-                startActivityForResult(new Intent(this, QuranIndexActivity.class), PICK_PAGE);
-                break;
-            case R.id.cat_quran_item_read_virtue:
-                TextActivity.newIntent(this, getString(R.string.read_quran_virtue), getString(R.string.cat_quran_item_read_virtue));
-                break;
-            case R.id.cat_quran_item_doaa:
-//                NawawiyaActivity.newIntent(this, getString(R.string.cat_quran_item_doaa), "doaa.html");
-                TextActivity.newIntent(this, Arrays.getDoaaQuran(), getString(R.string.cat_quran_item_doaa));
-                break;
-            case R.id.cat_quran_item_tafsir:
-                startActivity(new Intent(this, TafsirActivity.class));
-                break;
-            case R.id.cat_quran_item_m3ani:
-                startActivity(new Intent(this, M3aniActivity.class));
-                break;
-            case R.id.cat_quran_item_save_mark:
-                PreferenceUtil.setMarkPref(this, viewPager.getCurrentItem());
-                break;
-            case R.id.cat_quran_item_go_mark:
-                int markPref = PreferenceUtil.getMarkPref(this);
-                Log.d("TAG", "onClick: markPref: " + markPref);
-                setCurrentItem(markPref);
-                break;
+        if (which == R.id.cat_quran_item_index) {
+            startActivityForResult(new Intent(this, QuranIndexActivity.class), PICK_PAGE);
+        } else if (which == R.id.cat_quran_item_read_virtue) {
+            TextActivity.newIntent(this, getString(R.string.read_quran_virtue), getString(R.string.cat_quran_item_read_virtue));
+        } else if (which == R.id.cat_quran_item_doaa) {//                NawawiyaActivity.newIntent(this, getString(R.string.cat_quran_item_doaa), "doaa.html");
+            TextActivity.newIntent(this, Arrays.getDoaaQuran(), getString(R.string.cat_quran_item_doaa));
+        } else if (which == R.id.cat_quran_item_tafsir) {
+            startActivity(new Intent(this, TafsirActivity.class));
+        } else if (which == R.id.cat_quran_item_m3ani) {
+            startActivity(new Intent(this, M3aniActivity.class));
+        } else if (which == R.id.cat_quran_item_save_mark) {
+            PreferenceUtil.setMarkPref(this, viewPager.getCurrentItem());
+        } else if (which == R.id.cat_quran_item_go_mark) {
+            int markPref = PreferenceUtil.getMarkPref(this);
+            Log.d("TAG", "onClick: markPref: " + markPref);
+            setCurrentItem(markPref);
         }
         dialog.dismiss();
     }

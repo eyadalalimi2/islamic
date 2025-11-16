@@ -12,10 +12,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.eyadalalimi.islamic.pro.nbholyquran.StringArrayAdapter;
 import com.eyadalalimi.islamic.pro.other.HijriDate;
 import com.eyadalalimi.islamic.pro.other.PreferenceUtil;
-import com.eyadalalimi.islamic.pro.nbholyquran.StringArrayAdapter;
-
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -69,24 +68,21 @@ public class HijriActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_change:
-                Calendar calender = getSelectedCalender();
-                if (calender != null)
-                    change2Hijri(calender);
-                break;
-            case R.id.ib_days_up:
-                PreferenceUtil.setHijriAdjustPref(this, PreferenceUtil.getHijriAdjustPref(this) + 1);
-                Calendar calenderUp = getSelectedCalender();
-                if (calenderUp != null)
-                    change2Hijri(calenderUp);
-                break;
-            case R.id.ib_days_down:
-                PreferenceUtil.setHijriAdjustPref(this, PreferenceUtil.getHijriAdjustPref(this) - 1);
-                Calendar calenderDown = getSelectedCalender();
-                if (calenderDown != null)
-                    change2Hijri(calenderDown);
-                break;
+        int id = v.getId();
+        if (id == R.id.btn_change) {
+            Calendar calender = getSelectedCalender();
+            if (calender != null)
+                change2Hijri(calender);
+        } else if (id == R.id.ib_days_up) {
+            PreferenceUtil.setHijriAdjustPref(this, PreferenceUtil.getHijriAdjustPref(this) + 1);
+            Calendar calenderUp = getSelectedCalender();
+            if (calenderUp != null)
+                change2Hijri(calenderUp);
+        } else if (id == R.id.ib_days_down) {
+            PreferenceUtil.setHijriAdjustPref(this, PreferenceUtil.getHijriAdjustPref(this) - 1);
+            Calendar calenderDown = getSelectedCalender();
+            if (calenderDown != null)
+                change2Hijri(calenderDown);
         }
     }
 
