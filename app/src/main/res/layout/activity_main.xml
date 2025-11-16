@@ -6,20 +6,20 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainactivity"
     android:layout_height="match_parent"
-    android:background="@drawable/back_home"
+    android:background="@drawable/mybg02"
     android:layout_weight="1"
     android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="207dp"
-        android:layout_marginTop="-70dp">
+        android:layout_height="207dp">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="210dp"
-            android:background="@drawable/bg" />
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,7 +31,6 @@
                 android:id="@+id/do3aalyoum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/the_sans"
                 android:gravity="center"
@@ -49,7 +48,8 @@
                 android:gravity="center"
                 android:text="اجعل هذه الأذكار رفيقك أينما ذهبت"
                 android:textColor="@color/white"
-                android:textSize="15dp" />
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
         </LinearLayout>
 
     </FrameLayout>
@@ -71,6 +71,8 @@
         android:clipToPadding="false"
         android:layout_weight="1"
         android:layout_marginTop="-30dp"
+
+        android:background="@drawable/mybg02"
         android:scrollbars="none">
 
 
@@ -78,6 +80,9 @@
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
             android:orientation="vertical">
 
 
