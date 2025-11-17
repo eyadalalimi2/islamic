@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-android:background="@drawable/bg01"
+    android:background="@drawable/bg01"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
@@ -13,7 +12,7 @@ android:background="@drawable/bg01"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/darkorange"
+        android:background="@color/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay">
 
 
@@ -30,7 +29,7 @@ android:background="@drawable/bg01"
                 android:layout_height="35dp"
                 android:layout_gravity="right"
                 android:layout_marginRight="15dp"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/mylogosplatch" />
 
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
