@@ -16,9 +16,8 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.os.Environment;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,9 +33,12 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+
 import java.io.BufferedInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -61,7 +63,7 @@ public class AyaList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aya_list);
         MobileAds.initialize(getApplicationContext());
-        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         typeface = Typeface.createFromAsset(getAssets(), "font2.ttf");
@@ -69,14 +71,14 @@ public class AyaList extends AppCompatActivity {
         //get Recites
         Bundle b=getIntent().getExtras();
         RecitesName=b.getString("RecitesName");
-        listAya =(ListView) findViewById ( R.id.listView) ;
+        listAya = findViewById ( R.id.listView);
 //get list of muslim
         listrecitesAya.clear();
         LnaguageClass lc = new LnaguageClass();
         listrecitesAya = lc.GuranAya(RecitesName);
         listAya.setAdapter(new VivzAdapter(listrecitesAya));
-        LayoutLoading=(LinearLayout)findViewById(R.id.LayoutLoading);
-        progressBar=(ProgressBar)findViewById(R.id.progressBar);
+        LayoutLoading= findViewById(R.id.LayoutLoading);
+        progressBar= findViewById(R.id.progressBar);
         LayoutLoading.setVisibility(View.GONE);
         if(!isConnectingToInternet(AyaList.this))
         {
@@ -106,7 +108,7 @@ public class AyaList extends AppCompatActivity {
         startActivity(intent);
     }
     public void LoadAya(){
-        ListView list =(ListView) findViewById ( R.id.listView) ;
+        ListView list = findViewById ( R.id.listView);
 
 //get list of muslim
         LnaguageClass lc = new LnaguageClass();
@@ -170,7 +172,7 @@ public class AyaList extends AppCompatActivity {
         if (id == R.id.gbackmenu) {
 
             // rate app
-            if( ISDonwloading!=true) //it he isnot donlaidng know
+            if(!ISDonwloading) //it he isnot donlaidng know
                 if(SaveSettings.IsRated==0) {
                     DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
                         @Override
@@ -181,7 +183,7 @@ public class AyaList extends AppCompatActivity {
                                     Uri uri = Uri.parse("market://details?id=" + getPackageName());
                                     Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
                                     // To count with Play market backstack, After pressing back button,
-                                    // to taken back to our application, we need to add following flags to intent.
+                                    // to taken back to our application, we need to add following flags to intent.م
                                     goToMarket.addFlags(
                                             Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
                                     try {
@@ -268,7 +270,7 @@ public class AyaList extends AppCompatActivity {
                 String SDPath = Environment.getExternalStorageDirectory().getPath() + "/";
                 OutputStream output = new FileOutputStream(SDPath+  RecitesName+ RecitesAYA +".mp3");
 
-                byte data[] = new byte[1024];
+                byte[] data = new byte[1024];
 
                 long total = 0;
 
@@ -337,10 +339,10 @@ public class AyaList extends AppCompatActivity {
             LayoutInflater mInflater = getLayoutInflater();
             View row = mInflater.inflate(R.layout.single_rowayalist, null);
 
-            TextView title=(TextView) row.findViewById( R.id.textView1);
-            TextView cost=(TextView) row.findViewById( R.id.textView2);
-            ImageView image =(ImageView) row.findViewById( R.id.imageView);
-            Button budownload =(Button) row.findViewById( R.id.button);
+            TextView title= row.findViewById( R.id.textView1);
+            TextView cost= row.findViewById( R.id.textView2);
+            ImageView image = row.findViewById( R.id.imageView);
+            Button budownload = row.findViewById( R.id.button);
             title.setTypeface(typeface);
             cost.setTypeface(typeface2);
             //  budownload.setBackground(getResources().getDrawable(R.drawable.buttonred)) ; // "@drawable/buttonred");
@@ -379,7 +381,7 @@ public class AyaList extends AppCompatActivity {
                     TextView text = dialog.findViewById(R.id.text);
                     text.setText("هل تريد تحميل هذه السورة؟");
                     dialog.show();
-                    Button yesbutton = (Button) dialog.findViewById(R.id.yes_bt3);
+                    Button yesbutton = dialog.findViewById(R.id.yes_bt3);
                     // if button is clicked, close the custom dialog
                     yesbutton.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -387,7 +389,7 @@ public class AyaList extends AppCompatActivity {
                             if(isConnectingToInternet(AyaList.this))
                             {
 
-                                if( ISDonwloading!=true)
+                                if(!ISDonwloading)
                                     startDownload(temp.ImgUrl,ServerName );
                                 // Toast.makeText(this, linkaya, Toast.LENGTH_LONG).show();
 
@@ -403,7 +405,7 @@ public class AyaList extends AppCompatActivity {
                     });
 
 
-                    Button nobutton = (Button) dialog.findViewById(R.id.no_bt3);
+                    Button nobutton = dialog.findViewById(R.id.no_bt3);
                     // if button is clicked, close the custom dialog
                     nobutton.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -425,7 +427,7 @@ public class AyaList extends AppCompatActivity {
                 public void onClick(View v) {
 
 
-                    if( ISDonwloading!=true) {
+                    if(!ISDonwloading) {
 
                             for (int i = 0; i < listrecitesAya.size(); i++) {
                                 if (listrecitesAya.get(i).RealName.equals(temp.RealName)) {
@@ -445,7 +447,7 @@ public class AyaList extends AppCompatActivity {
                 public void onClick(View v) {
 
 
-                    if( ISDonwloading!=true) {
+                    if(!ISDonwloading) {
                             for (int i = 0; i < listrecitesAya.size(); i++) {
                                 if (listrecitesAya.get(i).RealName.equals(temp.RealName)) {
                                     RecitesAYA = String.valueOf(i);// ServerName;
@@ -461,7 +463,7 @@ public class AyaList extends AppCompatActivity {
             });
 
 
-            budownload.setText(getResources().getString(R.string.downlaod));
+            //budownload.setText(getResources().getString(R.string.downlaod));
             title.setText(temp.RealName);
             cost.setText(temp.StateName);// it updated
             //image.setImageResource(temp.ImgUrl);

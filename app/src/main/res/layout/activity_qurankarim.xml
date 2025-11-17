@@ -5,18 +5,22 @@
     android:layout_height="fill_parent"
     android:background="@drawable/mybgqoran1"
     android:layoutDirection="rtl"
-android:orientation="vertical"
+    android:orientation="vertical"
     tools:context=".qurankarim">
 
     <ListView
-
+        android:id="@+id/listView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:horizontalSpacing="15dp"
-        android:layout_weight="1"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:horizontalSpacing="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"

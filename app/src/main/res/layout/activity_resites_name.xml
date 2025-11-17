@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/back_home"
+    android:background="@drawable/mybgqoran1"
     android:layoutDirection="rtl"
 android:orientation="vertical"
     tools:context=".ResitesName">
 
     <ListView
-        android:background="@drawable/back_home"
+        android:background="@drawable/mybgqoran1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/listView"

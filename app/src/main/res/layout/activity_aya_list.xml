@@ -6,10 +6,10 @@
         android:layoutDirection="rtl"
         android:orientation="vertical"
         tools:context=".AyaList"
-        android:background="@drawable/back_home">
+    android:background="@drawable/mybgqoran1">
 
         <LinearLayout
-            android:background="@drawable/buttonred"
+            android:background="@drawable/back_home"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
                 android:fontFamily="@font/the_sans"
 
                 android:textSize="25dp"
-                android:textColor="@color/red"
+                android:textColor="@color/abc_decor_view_status_guard"
                 android:id="@+id/textView3"
                 android:layout_weight="0"
                 android:paddingTop="15dp" />
@@ -40,15 +40,17 @@
 
         </LinearLayout>
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/listView"
-            android:horizontalSpacing="15dp"
-
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:horizontalSpacing="15dp"
+        android:paddingTop="5dp" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
