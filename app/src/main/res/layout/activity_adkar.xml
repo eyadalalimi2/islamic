@@ -34,8 +34,8 @@
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="adkarSabah"
-
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -88,7 +88,7 @@
                     android:elevation="15dp"
                     android:onClick="massa"
                     android:padding="10dp"
-
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -139,7 +139,7 @@
                     android:layout_margin="20dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
-
+                    app:cardBackgroundColor="#80EDEDED"
                     android:onClick="adkaradima"
                     android:padding="10dp"
                     app:cardCornerRadius="15dp">
@@ -200,11 +200,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="adkaralmanzel"
-
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -254,11 +253,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="adaan"
                     android:padding="10dp"
-
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -308,11 +306,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
-
                     android:onClick="adkar_almasjid"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -373,9 +370,9 @@
                     android:layout_margin="20dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
-
                     android:onClick="koul"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -427,6 +424,7 @@
                     android:elevation="15dp"
                     android:onClick="mayit"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -478,6 +476,7 @@
                     android:elevation="15dp"
                     android:onClick="eat"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -538,6 +537,7 @@
                     android:elevation="15dp"
                     android:onClick="aljomoaa"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -588,6 +588,7 @@
                     android:elevation="15dp"
                     android:onClick="rouqya"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -634,10 +635,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="outher"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -694,11 +695,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="dikrQuran"
-
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -746,11 +746,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="nabiy"
-
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -797,10 +796,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="fadldouaa"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -858,11 +857,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="fadldikr"
-
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -907,14 +905,13 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button22"
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="nawm"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -959,14 +956,13 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button23"
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="fadlqurann"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -1021,14 +1017,13 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button251"
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="finishquran"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -1076,11 +1071,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="nawm2"
-
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -1126,13 +1120,12 @@
                     android:id="@+id/button25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="asmaaaa"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -1190,10 +1183,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="salat1"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -1238,14 +1231,13 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button10"
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="salat2"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -1291,13 +1283,12 @@
                     android:id="@+id/button11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="@color/white"
                     android:elevation="15dp"
                     android:onClick="wodoa"
                     android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
