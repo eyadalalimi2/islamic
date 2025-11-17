@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:ads="http://schemas.android.com/tools"
-    android:background="@drawable/back_home"
+    android:background="@drawable/mybghijri"
     android:orientation="vertical">
 
     <include layout="@layout/toolbar" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical"
@@ -22,8 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            app:cardBackgroundColor="@color/colorPrimaryDark"
+            android:paddingBottom="15dp"
+            app:cardBackgroundColor="#C7991C"
             app:cardCornerRadius="10dp">
 
             <RelativeLayout
@@ -49,7 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txt_brith"
-                    android:background="@color/chx_colorAccent"
+                    android:background="#F6CC87"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingTop="5dp">
@@ -60,7 +60,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:inputType="number"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/abc_decor_view_status_guard"
+                        tools:ignore="SpeakableTextPresentCheck" />
 
                     <Spinner
                         android:id="@+id/et_ce_month"
@@ -68,9 +69,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:inputType="number"
+                        android:minHeight="48dp"
                         android:outlineAmbientShadowColor="@color/white"
-                        android:outlineSpotShadowColor="@color/white"
 
+                        android:outlineSpotShadowColor="@color/white"
                         android:textColor="@color/white" />
 
                     <Spinner
@@ -80,6 +82,7 @@
                         android:layout_weight="1"
                         android:inputType="number"
 
+                        android:minHeight="48dp"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
@@ -128,10 +131,11 @@
                 android:layout_height="36dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
-                android:scaleType="fitXY"
                 android:layout_alignParentTop="true"
                 android:background="@drawable/ic_arrow_up"
-                android:onClick="onClick" />
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/ib_days_down"
@@ -141,7 +145,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:background="@drawable/ic_arrow_down"
-                android:onClick="onClick" />
+                android:onClick="onClick"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         </RelativeLayout>
 
@@ -152,7 +157,7 @@
             android:layout_marginTop="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardBackgroundColor="#C7991C"
             app:cardCornerRadius="10dp">
 
             <RelativeLayout
@@ -178,7 +183,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txt_hijri"
                     android:layout_marginTop="@dimen/screen_padding"
-                    android:background="@color/chx_colorAccent"
+                    android:background="#F6CC87"
                     android:orientation="horizontal"
                     android:paddingTop="5dp">
 
@@ -189,7 +194,8 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/the_sans"
                         android:inputType="number"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                     <TextView
                         android:id="@+id/et_ah_month"
@@ -198,7 +204,8 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/the_sans"
                         android:inputType="number"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
                     <TextView
                         android:id="@+id/et_ah_day"
@@ -207,7 +214,8 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/the_sans"
                         android:inputType="number"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
                 </LinearLayout>
 
                 <TextView
@@ -215,7 +223,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lin_tarih_hijri"
-                    android:background="@color/chx_colorAccent"
+                    android:background="#F6CC87"
                     android:fontFamily="@font/the_sans"
                     android:gravity="center"
                     android:paddingBottom="10dp"
