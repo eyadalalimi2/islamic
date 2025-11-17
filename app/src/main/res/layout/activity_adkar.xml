@@ -17,20 +17,22 @@
             android:layoutDirection="rtl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="15dp"
             android:orientation="vertical">
 
+            <!-- الصف 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
                 android:layout_weight="3"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/sabah"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="adkarSabah"
@@ -39,7 +41,6 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
@@ -74,16 +75,15 @@
                             android:textSize="15.0sp"
                             android:textStyle="bold" />
 
-
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/massa"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="massa"
@@ -92,7 +92,6 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
@@ -109,7 +108,6 @@
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
                                 android:src="@drawable/mybook" />
-
 
                         </LinearLayout>
 
@@ -134,9 +132,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/adima"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     app:cardBackgroundColor="#80EDEDED"
@@ -145,7 +143,6 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
@@ -162,7 +159,6 @@
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
                                 android:src="@drawable/mybook" />
-
 
                         </LinearLayout>
 
@@ -187,18 +183,19 @@
 
             </LinearLayout>
 
+            <!-- الصف 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="3"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button6"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="adkaralmanzel"
@@ -207,7 +204,6 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
@@ -242,16 +238,15 @@
                             android:layout_weight="1.0"
                             android:text="@string/adkar_almanzel" />
 
-
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="adaan"
@@ -260,7 +255,6 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
@@ -278,13 +272,12 @@
                                 android:layout_height="52.0dip"
                                 android:src="@drawable/mybook" />
 
-
                         </LinearLayout>
 
                         <TextView
                             android:id="@+id/adanText"
+                            android:layout_weight="1.0"
                             android:text="@string/adan"
-                            android:textSize="15.0sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/black"
                             android:gravity="center"
@@ -294,7 +287,7 @@
                             android:layout_marginTop="5.0dip"
                             android:layout_marginRight="5.0dip"
                             android:layout_marginBottom="10.0dip"
-                            android:layout_weight="1.0" />
+                            android:textSize="15.0sp" />
 
                     </LinearLayout>
 
@@ -302,9 +295,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button8"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="adkar_almasjid"
@@ -313,7 +306,6 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
@@ -331,23 +323,22 @@
                                 android:layout_height="52.0dip"
                                 android:src="@drawable/mybook" />
 
-
                         </LinearLayout>
 
                         <TextView
                             android:id="@+id/masgidText"
-                            android:text="@string/masgid"
-                            android:textSize="15.0sp"
-                            android:textStyle="bold"
-                            android:textColor="@android:color/black"
+                            android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/masgid"
+                            android:textColor="@android:color/black"
+                            android:textSize="15.0sp"
                             android:layout_width="fill_parent"
                             android:layout_height="0.0dip"
                             android:layout_marginLeft="5.0dip"
                             android:layout_marginTop="5.0dip"
                             android:layout_marginRight="5.0dip"
                             android:layout_marginBottom="10.0dip"
-                            android:layout_weight="1.0" />
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -355,19 +346,19 @@
 
             </LinearLayout>
 
+            <!-- الصف 3 -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="3"
                 android:orientation="horizontal">
 
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button12"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="koul"
@@ -376,7 +367,6 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
@@ -389,27 +379,27 @@
                             android:layout_marginTop="5.0dip">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
 
                         </LinearLayout>
 
                         <TextView
                             android:id="@+id/kol_dou3aText"
-                            android:text="@string/kol_dou3a"
-                            android:textSize="15.0sp"
-                            android:textStyle="bold"
-                            android:textColor="@android:color/black"
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="0.0dip"
                             android:layout_marginLeft="5.0dip"
+                            android:textColor="@android:color/black"
                             android:layout_marginTop="5.0dip"
                             android:layout_marginRight="5.0dip"
                             android:layout_marginBottom="10.0dip"
-                            android:layout_weight="1.0" />
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:text="@string/kol_dou3a"
+                            android:textSize="15.0sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -417,9 +407,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button13"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="mayit"
@@ -428,80 +418,27 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
 
                         </LinearLayout>
 
                         <TextView
                             android:id="@+id/mayitText"
-                            android:text="@string/mayit"
-                            android:textSize="15.0sp"
-                            android:textStyle="bold"
-                            android:textColor="@android:color/black"
-                            android:gravity="center"
-                            android:layout_width="fill_parent"
-                            android:layout_height="0.0dip"
-                            android:layout_marginLeft="5.0dip"
-                            android:layout_marginTop="5.0dip"
-                            android:layout_marginRight="5.0dip"
-                            android:layout_marginBottom="10.0dip"
-                            android:layout_weight="1.0" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/button14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:elevation="15dp"
-                    android:onClick="eat"
-                    android:padding="10dp"
-                    app:cardBackgroundColor="#80EDEDED"
-                    app:cardCornerRadius="15dp">
-
-                    <LinearLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:gravity="center"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
-
-                            <ImageView
-                                android:gravity="center_vertical"
-                                android:layout_width="90.0dip"
-                                android:layout_height="52.0dip"
-                                android:src="@drawable/mybook" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/eatText"
-                            android:text="@string/eat"
                             android:layout_width="fill_parent"
                             android:layout_height="0.0dip"
                             android:layout_marginLeft="5.0dip"
@@ -510,6 +447,57 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/mayit"
+                            android:textColor="@android:color/black"
+                            android:textSize="15.0sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/button14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:elevation="15dp"
+                    android:onClick="eat"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="#80EDEDED"
+                    app:cardCornerRadius="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="90.0dip"
+                                android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
+                                android:src="@drawable/mybook" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/eatText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_marginTop="5.0dip"
+                            android:layout_marginRight="5.0dip"
+                            android:layout_marginBottom="10.0dip"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:text="@string/eat"
                             android:textColor="@android:color/black"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -518,21 +506,21 @@
 
                 </androidx.cardview.widget.CardView>
 
-
             </LinearLayout>
 
+            <!-- الصف 4 -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="3"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button15"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="aljomoaa"
@@ -541,22 +529,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -570,10 +557,9 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/akaraljomoaa"
                             android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:text="@string/akaraljomoaa" />
-
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -581,9 +567,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button16"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="rouqya"
@@ -592,21 +578,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
+
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -620,10 +606,9 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/rouqya"
                             android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:text="@string/rouqya" />
-
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -631,9 +616,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button17"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="outher"
@@ -642,22 +627,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -670,31 +654,31 @@
                             android:layout_marginRight="5.0dip"
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
-                            android:textColor="@android:color/black"
-                            android:textStyle="bold"
                             android:gravity="center"
-                            android:text="@string/adkar" />
-
+                            android:text="@string/adkar"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-
             </LinearLayout>
 
+            <!-- الصف 5 -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="3"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button18"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="dikrQuran"
                     android:padding="10dp"
@@ -702,22 +686,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -731,10 +714,9 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/ad3iya_quran"
                             android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:text="@string/ad3iya_quran" />
-
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -742,9 +724,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button19"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="nabiy"
@@ -753,22 +735,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -782,9 +763,9 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/salats"
                             android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:text="@string/salats" />
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -792,9 +773,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button20"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="fadldouaa"
@@ -803,22 +784,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -832,30 +812,29 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/dou3a"
                             android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:text="@string/dou3a" />
-
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-
             </LinearLayout>
 
+            <!-- الصف 6 -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="3"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button21"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="fadldikr"
@@ -864,22 +843,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -893,10 +871,9 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/dikr"
                             android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:text="@string/dikr" />
-
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -904,9 +881,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button22"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="nawm"
@@ -915,22 +892,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -944,10 +920,9 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
-                            android:textStyle="bold"
+                            android:text="@string/nawm"
                             android:textColor="@color/black"
-                            android:text="@string/nawm" />
-
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -955,9 +930,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button23"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="fadlqurann"
@@ -966,22 +941,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -995,30 +969,29 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/quran_fadl"
                             android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:text="@string/quran_fadl" />
-
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-
             </LinearLayout>
 
+            <!-- الصف 7 -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="3"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button251"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="finishquran"
@@ -1027,22 +1000,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -1056,10 +1028,9 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/finish_quran"
                             android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:text="@string/finish_quran" />
-
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -1067,9 +1038,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button255"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="nawm2"
@@ -1078,29 +1049,26 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
                         <TextView
                             android:id="@+id/nawm2Text"
-                            android:textColor="@android:color/black"
-                            android:textStyle="bold"
                             android:layout_width="fill_parent"
                             android:layout_height="0.0dip"
                             android:layout_marginLeft="5.0dip"
@@ -1109,8 +1077,9 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
-                            android:text="@string/nawm2" />
-
+                            android:text="@string/nawm2"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -1118,9 +1087,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button25"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="asmaaaa"
@@ -1129,22 +1098,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -1158,30 +1126,29 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/asmaaallah"
                             android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:text="@string/asmaaallah" />
-
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-
             </LinearLayout>
 
+            <!-- الصف 8 -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="3"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button9"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="salat1"
@@ -1190,22 +1157,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -1219,10 +1185,9 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/salat"
                             android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:text="@string/salat" />
-
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -1230,9 +1195,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button10"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="salat2"
@@ -1241,22 +1206,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -1270,10 +1234,9 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/salat2"
                             android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:text="@string/salat2" />
-
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -1281,9 +1244,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/button11"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="15dp"
                     android:onClick="wodoa"
@@ -1292,22 +1255,21 @@
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="2dp"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:gravity="center"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5.0dip">
+                            android:layout_marginTop="5.0dip"
+                            android:gravity="center">
 
                             <ImageView
-                                android:gravity="center_vertical"
                                 android:layout_width="90.0dip"
                                 android:layout_height="52.0dip"
+                                android:gravity="center_vertical"
                                 android:src="@drawable/mybook" />
                         </LinearLayout>
 
@@ -1321,21 +1283,17 @@
                             android:layout_marginBottom="10.0dip"
                             android:layout_weight="1.0"
                             android:gravity="center"
+                            android:text="@string/wodoe"
                             android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:text="@string/wodoe" />
-
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-
             </LinearLayout>
 
-
         </LinearLayout>
-
 
     </androidx.core.widget.NestedScrollView>
 
