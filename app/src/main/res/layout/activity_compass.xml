@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back_home"
+    android:background="@drawable/mybgawkat"
     tools:context=".CompassActivity">
 
 
@@ -11,12 +11,19 @@
         android:id="@+id/teks_atas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="?attr/actionBarSize"
         android:fontFamily="@font/the_sans"
-        android:paddingTop="16dp"
-        android:textColor="@color/black" />
+        android:paddingTop="17dp"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/teks_bawah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/the_sans"
+        android:paddingTop="117dp"
+        android:textColor="#FFFFFF" />
 
     <ImageView
         android:id="@+id/main_image_dial"
@@ -35,15 +42,6 @@
         android:scaleType="fitXY"
         android:src="@drawable/jarum_qiblat" />
 
-    <TextView
-        android:id="@+id/teks_bawah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="140dp"
-        android:fontFamily="@font/the_sans"
-        android:textColor="@color/black" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
