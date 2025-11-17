@@ -69,45 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_azkar"
-                    appns:cardCornerRadius="14dp"
-                    appns:cardElevation="4dp"
-                    android:layout_height="120dp"
-                    android:outlineAmbientShadowColor="@android:color/transparent"
-                    android:outlineSpotShadowColor="@android:color/transparent"
-                    tools:targetApi="p"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_width="0dp"
-                    appns:cardBackgroundColor="#85FAB00C"
-                    android:layout_weight="1"
-                    tools:ignore="RtlCompat">
-                    <LinearLayout
-                        android:background="?selectableItemBackground"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="8dp">
-                        <TextView
-                            android:id="@+id/azkar_label"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/the_sans"
-                            android:text="@string/ad3iyaaa"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:gravity="center"
-                            android:textStyle="bold" />
-                        <ImageView
-                            android:layout_width="182dp"
-                            android:layout_height="72dp"
-                            android:layout_marginTop="8dp"
-                            android:src="@drawable/myicon03" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <!-- Card 1: btn_quran (was Right, now Left) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_quran"
                     appns:cardCornerRadius="14dp"
@@ -115,13 +77,13 @@
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
-                    appns:cardElevation="4dp"
+                    android:layout_weight="1"
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
-                    android:layout_weight="1">
+                    appns:cardElevation="4dp">
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -146,23 +108,19 @@
                             android:src="@drawable/myicon01" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                <!-- Card 2: btn_quranlire (was Left, now Right) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_quranlire"
                     appns:cardCornerRadius="14dp"
-                    appns:cardElevation="4dp"
+                    android:outlineAmbientShadowColor="@android:color/transparent"
                     android:layout_height="120dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
-                    android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
+                    appns:cardElevation="4dp"
                     tools:targetApi="p"
                     android:layout_weight="1">
                     <LinearLayout
@@ -177,8 +135,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/the_sans"
-                            android:text="@string/quranlire"
                             android:gravity="center"
+                            android:text="@string/quranlire"
                             android:textSize="18sp"
                             android:textColor="@color/white"
                             android:textStyle="bold" />
@@ -189,12 +147,18 @@
                             android:src="@drawable/myicon02" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Card 3: btn_reminder (was Right, now Left) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_reminder"
                     appns:cardCornerRadius="14dp"
                     android:layout_height="120dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
                     appns:cardElevation="4dp"
                     android:layout_width="0dp"
@@ -215,10 +179,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/the_sans"
-                            android:text="@string/adkar2"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
                             android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="@string/adkar2"
+                            android:textSize="18sp"
                             android:textStyle="bold" />
                         <ImageView
                             android:layout_width="182dp"
@@ -227,62 +191,65 @@
                             android:src="@drawable/myicon04" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                <!-- Card 4: btn_azkar (was Left, now Right) -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_stories"
+                    android:id="@+id/btn_azkar"
                     appns:cardCornerRadius="14dp"
-                    appns:cardElevation="4dp"
+                    android:layout_weight="1"
                     android:layout_height="120dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_width="0dp"
-                    appns:cardBackgroundColor="#85FAB00C"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
-                    tools:targetApi="p"
-                    android:layout_weight="1">
-                    <LinearLayout
-                        android:background="?selectableItemBackground"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="8dp">
-                        <TextView
-                            android:id="@+id/occasions_label"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/the_sans"
-                            android:text="@string/stories2"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:gravity="center"
-                            android:textStyle="bold" />
-                        <ImageView
-                            android:layout_width="182dp"
-                            android:layout_height="72dp"
-                            android:layout_marginTop="8dp"
-                            android:src="@drawable/myicon07" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_subha"
-                    appns:cardCornerRadius="14dp"
-                    android:layout_height="120dp"
+                    appns:cardElevation="4dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginBottom="16dp"
-                    appns:cardElevation="4dp"
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
+                    tools:ignore="RtlCompat"
+                    tools:targetApi="p">
+                    <LinearLayout
+                        android:background="?selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+                        <TextView
+                            android:id="@+id/azkar_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/the_sans"
+                            android:text="@string/ad3iyaaa"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon03" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Card 5: qibladirec (was Right, now Left) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/qibladirec"
+                    appns:cardCornerRadius="14dp"
+                    android:layout_height="120dp"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
+                    appns:cardElevation="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp"
                     tools:targetApi="p"
+                    android:layout_width="0dp"
+                    appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1">
                     <LinearLayout
                         android:background="?selectableItemBackground"
@@ -292,11 +259,11 @@
                         android:orientation="vertical"
                         android:padding="8dp">
                         <TextView
-                            android:id="@+id/favorite_label"
+                            android:id="@+id/quran_label2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/the_sans"
-                            android:text="@string/subhaaaa"
+                            android:text="@string/qibla"
                             android:textColor="@color/white"
                             android:textSize="18sp"
                             android:gravity="center"
@@ -305,24 +272,20 @@
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
-                            android:src="@drawable/myicon08" />
+                            android:src="@drawable/myicon06" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                <!-- Card 6: prayerbtn (was Left, now Right) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/prayerbtn"
                     appns:cardCornerRadius="14dp"
-                    appns:cardElevation="4dp"
-                    android:layout_height="120dp"
                     android:outlineAmbientShadowColor="@android:color/transparent"
+                    android:layout_height="120dp"
                     android:outlineSpotShadowColor="@android:color/transparent"
+                    appns:cardElevation="4dp"
                     tools:targetApi="p"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
@@ -351,19 +314,25 @@
                             android:src="@drawable/myicon05" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Card 7: btn_subha (was Right, now Left) -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/qibladirec"
+                    android:id="@+id/btn_subha"
                     appns:cardCornerRadius="14dp"
                     android:layout_height="120dp"
-                    android:outlineAmbientShadowColor="@android:color/transparent"
-                    android:outlineSpotShadowColor="@android:color/transparent"
-                    tools:targetApi="p"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
-                    appns:cardElevation="4dp"
+                    android:outlineAmbientShadowColor="@android:color/transparent"
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
+                    android:outlineSpotShadowColor="@android:color/transparent"
+                    appns:cardElevation="4dp"
+                    tools:targetApi="p"
                     android:layout_weight="1">
                     <LinearLayout
                         android:background="?selectableItemBackground"
@@ -373,11 +342,11 @@
                         android:orientation="vertical"
                         android:padding="8dp">
                         <TextView
-                            android:id="@+id/quran_label2"
+                            android:id="@+id/favorite_label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/the_sans"
-                            android:text="@string/qibla"
+                            android:text="@string/subhaaaa"
                             android:textColor="@color/white"
                             android:textSize="18sp"
                             android:gravity="center"
@@ -386,7 +355,46 @@
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
-                            android:src="@drawable/myicon06" />
+                            android:src="@drawable/myicon08" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- Card 8: btn_stories (was Left, now Right) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_stories"
+                    appns:cardCornerRadius="14dp"
+                    android:outlineAmbientShadowColor="@android:color/transparent"
+                    android:layout_height="120dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="0dp"
+                    appns:cardBackgroundColor="#85FAB00C"
+                    android:outlineSpotShadowColor="@android:color/transparent"
+                    appns:cardElevation="4dp"
+                    tools:targetApi="p"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:background="?selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+                        <TextView
+                            android:id="@+id/occasions_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/the_sans"
+                            android:text="@string/stories2"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon07" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -394,44 +402,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/msgislamic"
-                    appns:cardCornerRadius="14dp"
-                    appns:cardElevation="4dp"
-                    android:layout_height="120dp"
-                    android:outlineAmbientShadowColor="@android:color/transparent"
-                    android:outlineSpotShadowColor="@android:color/transparent"
-                    tools:targetApi="p"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_width="0dp"
-                    appns:cardBackgroundColor="#85FAB00C"
-                    android:layout_weight="1">
-                    <LinearLayout
-                        android:background="?selectableItemBackground"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="8dp">
-                        <TextView
-                            android:id="@+id/azkar_label145"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/the_sans"
-                            android:text="رسائل"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:gravity="center"
-                            android:textStyle="bold" />
-                        <ImageView
-                            android:layout_width="182dp"
-                            android:layout_height="72dp"
-                            android:layout_marginTop="8dp"
-                            android:src="@drawable/myicon11" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <!-- Card 9: cat_albukhari (was Right, now Left) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_albukhari"
                     appns:cardCornerRadius="14dp"
@@ -439,8 +410,8 @@
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
                     appns:cardElevation="4dp"
                     android:layout_width="0dp"
@@ -470,26 +441,22 @@
                             android:src="@drawable/myicon10" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                <!-- Card 10: cat_nawawiya_40 (was Left, now Right) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_nawawiya_40"
                     appns:cardCornerRadius="14dp"
-                    appns:cardElevation="4dp"
+                    android:layout_weight="1"
                     android:layout_height="120dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
-                    tools:targetApi="p"
-                    android:layout_weight="1"
-                    tools:ignore="RtlCompat">
+                    appns:cardElevation="4dp"
+                    tools:ignore="RtlCompat"
+                    tools:targetApi="p">
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -514,20 +481,26 @@
                             android:src="@drawable/myicon09" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Card 11: cat_fiqh (was Right, now Left) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_fiqh"
                     appns:cardCornerRadius="14dp"
                     android:layout_height="120dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
-                    appns:cardElevation="4dp"
+                    android:layout_weight="1"
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
-                    android:layout_weight="1">
+                    appns:cardElevation="4dp">
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -552,26 +525,21 @@
                             android:src="@drawable/myicon12" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                <!-- Card 12: msgislamic (was Left, now Right) -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cat_hijri"
+                    android:id="@+id/msgislamic"
                     appns:cardCornerRadius="14dp"
-                    appns:cardElevation="4dp"
+                    android:outlineAmbientShadowColor="@android:color/transparent"
                     android:layout_height="120dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="16dp"
+                    android:outlineSpotShadowColor="@android:color/transparent"
+                    appns:cardElevation="4dp"
+                    tools:targetApi="p"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
-                    android:outlineAmbientShadowColor="@android:color/transparent"
-                    android:outlineSpotShadowColor="@android:color/transparent"
-                    tools:targetApi="p"
-                    android:layout_weight="1"
-                    tools:ignore="RtlCompat">
+                    android:layout_weight="1">
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -580,11 +548,11 @@
                         android:orientation="vertical"
                         android:padding="8dp">
                         <TextView
-                            android:id="@+id/category_label474"
+                            android:id="@+id/azkar_label145"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/the_sans"
-                            android:text="التقويم الهجري"
+                            android:text="رسائل"
                             android:textColor="@color/white"
                             android:textSize="18sp"
                             android:gravity="center"
@@ -593,17 +561,23 @@
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
-                            android:src="@drawable/myicon13" />
+                            android:src="@drawable/myicon11" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Card 13: cat_library (was Right, now Left) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_library"
                     appns:cardCornerRadius="14dp"
-                    android:layout_height="120dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="16dp"
                     appns:cardElevation="4dp"
+                    android:layout_height="120dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
                     android:outlineAmbientShadowColor="@android:color/transparent"
@@ -633,6 +607,46 @@
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon14" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- Card 14: cat_hijri (was Left, now Right) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cat_hijri"
+                    appns:cardCornerRadius="14dp"
+                    android:layout_height="120dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="16dp"
+                    appns:cardElevation="4dp"
+                    android:layout_width="0dp"
+                    appns:cardBackgroundColor="#85FAB00C"
+                    android:outlineAmbientShadowColor="@android:color/transparent"
+                    android:outlineSpotShadowColor="@android:color/transparent"
+                    tools:targetApi="p"
+                    android:layout_weight="1"
+                    tools:ignore="RtlCompat">
+                    <LinearLayout
+                        android:background="?selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+                        <TextView
+                            android:id="@+id/category_label474"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/the_sans"
+                            android:text="التقويم الهجري"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="182dp"
+                            android:layout_height="72dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/myicon13" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
