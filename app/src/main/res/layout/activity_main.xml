@@ -7,20 +7,16 @@
     android:id="@+id/mainactivity"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="138dp"
         android:background="@drawable/bg">
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginTop="25dp"
             android:orientation="vertical">
-
             <TextView
                 android:id="@+id/do3aalyoum"
                 android:layout_width="match_parent"
@@ -31,7 +27,6 @@
                 android:text="دعاء اليوم"
                 android:textColor="@color/red"
                 android:textSize="25dp" />
-
             <TextView
                 android:id="@+id/dou3a"
                 android:layout_width="match_parent"
@@ -45,9 +40,7 @@
                 android:textSize="15dp"
                 tools:ignore="TextSizeCheck" />
         </LinearLayout>
-
     </FrameLayout>
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,8 +48,6 @@
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         android:src="@drawable/mybg01" />
-
-
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_scroll_view"
         android:layout_width="match_parent"
@@ -66,8 +57,6 @@
         android:layout_marginTop="-30dp"
         android:background="@drawable/mybg02"
         android:scrollbars="none">
-
-
         <LinearLayout
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
@@ -76,14 +65,10 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:orientation="vertical">
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_azkar"
                     appns:cardCornerRadius="14dp"
@@ -99,7 +84,6 @@
                     appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1"
                     tools:ignore="RtlCompat">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -107,7 +91,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/azkar_label"
                             android:layout_width="wrap_content"
@@ -118,18 +101,13 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon03" />
-
                     </LinearLayout>
-
                 </androidx.cardview.widget.CardView>
-
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_quran"
                     appns:cardCornerRadius="14dp"
@@ -144,7 +122,6 @@
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -152,7 +129,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/quran_label21"
                             android:layout_width="wrap_content"
@@ -163,25 +139,18 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon01" />
-
                     </LinearLayout>
-
-
                 </androidx.cardview.widget.CardView>
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_quranlire"
                     appns:cardCornerRadius="14dp"
@@ -196,7 +165,6 @@
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -204,7 +172,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/category_label"
                             android:layout_width="wrap_content"
@@ -215,17 +182,13 @@
                             android:textSize="18sp"
                             android:textColor="@color/white"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon02" />
-
                     </LinearLayout>
-
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_reminder"
                     appns:cardCornerRadius="14dp"
@@ -240,7 +203,6 @@
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -248,7 +210,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/reminder_label"
                             android:layout_width="wrap_content"
@@ -259,25 +220,18 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon04" />
-
                     </LinearLayout>
-
-
                 </androidx.cardview.widget.CardView>
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_stories"
                     appns:cardCornerRadius="14dp"
@@ -292,7 +246,6 @@
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -300,7 +253,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/occasions_label"
                             android:layout_width="wrap_content"
@@ -311,17 +263,13 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon07" />
-
                     </LinearLayout>
-
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_subha"
                     appns:cardCornerRadius="14dp"
@@ -336,7 +284,6 @@
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -344,7 +291,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/favorite_label"
                             android:layout_width="wrap_content"
@@ -355,26 +301,18 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon08" />
-
                     </LinearLayout>
-
-
                 </androidx.cardview.widget.CardView>
-
             </LinearLayout>
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/prayerbtn"
                     appns:cardCornerRadius="14dp"
@@ -389,7 +327,6 @@
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -397,7 +334,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/azkar_label1"
                             android:layout_width="wrap_content"
@@ -408,18 +344,13 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon05" />
-
                     </LinearLayout>
-
                 </androidx.cardview.widget.CardView>
-
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/qibladirec"
                     appns:cardCornerRadius="14dp"
@@ -434,7 +365,6 @@
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -442,7 +372,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/quran_label2"
                             android:layout_width="wrap_content"
@@ -453,29 +382,18 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon06" />
-
                     </LinearLayout>
-
-
                 </androidx.cardview.widget.CardView>
-
             </LinearLayout>
-
-
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/msgislamic"
                     appns:cardCornerRadius="14dp"
@@ -490,7 +408,6 @@
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -498,7 +415,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/azkar_label145"
                             android:layout_width="wrap_content"
@@ -509,18 +425,13 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon11" />
-
                     </LinearLayout>
-
                 </androidx.cardview.widget.CardView>
-
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_albukhari"
                     appns:cardCornerRadius="14dp"
@@ -535,7 +446,6 @@
                     android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
                     android:layout_weight="1">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -543,7 +453,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/quran_label42"
                             android:layout_width="wrap_content"
@@ -554,27 +463,18 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon10" />
-
                     </LinearLayout>
-
-
                 </androidx.cardview.widget.CardView>
-
             </LinearLayout>
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_nawawiya_40"
                     appns:cardCornerRadius="14dp"
@@ -590,7 +490,6 @@
                     tools:targetApi="p"
                     android:layout_weight="1"
                     tools:ignore="RtlCompat">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -598,7 +497,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/category_label47"
                             android:layout_width="wrap_content"
@@ -609,17 +507,13 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon09" />
-
                     </LinearLayout>
-
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_fiqh"
                     appns:cardCornerRadius="14dp"
@@ -634,7 +528,6 @@
                     android:outlineSpotShadowColor="@android:color/transparent"
                     tools:targetApi="p"
                     android:layout_weight="1">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -642,7 +535,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/reminder_label46"
                             android:layout_width="wrap_content"
@@ -653,25 +545,18 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon12" />
-
                     </LinearLayout>
-
-
                 </androidx.cardview.widget.CardView>
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_hijri"
                     appns:cardCornerRadius="14dp"
@@ -687,7 +572,6 @@
                     tools:targetApi="p"
                     android:layout_weight="1"
                     tools:ignore="RtlCompat">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -695,7 +579,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/category_label474"
                             android:layout_width="wrap_content"
@@ -706,17 +589,13 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon13" />
-
                     </LinearLayout>
-
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_library"
                     appns:cardCornerRadius="14dp"
@@ -732,7 +611,6 @@
                     tools:targetApi="p"
                     android:layout_weight="1"
                     tools:ignore="RtlCompat">
-
                     <LinearLayout
                         android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
@@ -740,7 +618,6 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:id="@+id/reminder_label4674"
                             android:layout_width="wrap_content"
@@ -751,23 +628,15 @@
                             android:textSize="18sp"
                             android:gravity="center"
                             android:textStyle="bold" />
-
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/myicon14" />
-
                     </LinearLayout>
-
-
                 </androidx.cardview.widget.CardView>
-
             </LinearLayout>
-
         </LinearLayout>
-
-
     </androidx.core.widget.NestedScrollView>
     <LinearLayout
         android:layout_width="match_parent"
@@ -783,6 +652,6 @@
             android:layout_gravity="center"
             android:layout_weight="0"
             ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
+            ads:adUnitId="@string/banner_ad_unit_id" />
     </LinearLayout>
 </LinearLayout>
