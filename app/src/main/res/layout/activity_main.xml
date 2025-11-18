@@ -548,35 +548,39 @@
                 <!-- Card 12: msgislamic (was Left, now Right) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/msgislamic"
-                    appns:cardCornerRadius="14dp"
-                    android:outlineAmbientShadowColor="@android:color/transparent"
-                    android:layout_height="120dp"
-                    android:outlineSpotShadowColor="@android:color/transparent"
-                    appns:cardElevation="4dp"
-                    tools:targetApi="p"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:outlineAmbientShadowColor="@android:color/transparent"
+                    android:outlineSpotShadowColor="@android:color/transparent"
+                    android:visibility="gone"
                     appns:cardBackgroundColor="#85FAB00C"
-                    android:layout_weight="1">
+                    appns:cardCornerRadius="14dp"
+                    appns:cardElevation="4dp"
+                    tools:targetApi="p">
+
                     <LinearLayout
-                        android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="?selectableItemBackground"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
+
                         <TextView
                             android:id="@+id/azkar_label145"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/the_sans"
+                            android:gravity="center"
                             android:text="رسائل"
                             android:textColor="@color/white"
                             android:textSize="18sp"
-                            android:gravity="center"
                             android:textStyle="bold" />
+
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
