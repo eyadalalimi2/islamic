@@ -25,6 +25,7 @@
             android:layout_alignBottom="@+id/imgchannel"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:layout_toLeftOf="@+id/imgchannel"
             android:layout_weight="1"
             android:focusable="false"
@@ -35,7 +36,7 @@
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/abc_decor_view_status_guard_light"
-            android:textSize="20dp" />
+            android:textSize="18dp" />
 
         <ImageView
             android:id="@+id/imageView"
