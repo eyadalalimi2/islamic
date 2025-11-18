@@ -23,7 +23,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/imgchannel"
-            android:src="@drawable/ic_msg"
+            android:src="@drawable/mylatter"
             android:layout_marginLeft="7dp"
             android:layout_weight="0" />
 
@@ -48,7 +48,7 @@
             android:layout_weight="1"
             android:background="@drawable/rounded_corners"
             android:gravity="center"
-            android:text="سورة الفاتحة"
+            android:text="عنوان الرسالة "
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/black"
             android:textSize="23dp" />
