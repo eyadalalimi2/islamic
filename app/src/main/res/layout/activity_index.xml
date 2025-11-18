@@ -4,7 +4,7 @@
     android:id="@+id/lay_index_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mybgqoran1"
+    android:background="@drawable/mybgscreen"
     android:orientation="vertical">
 
     <include layout="@layout/toolbar" />

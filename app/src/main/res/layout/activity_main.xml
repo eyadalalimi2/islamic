@@ -422,42 +422,47 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
                 <!-- Card 9: cat_albukhari (was Right, now Left) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_albukhari"
-                    appns:cardCornerRadius="14dp"
+                    android:layout_width="0dp"
                     android:layout_height="120dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
-                    tools:targetApi="p"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="16dp"
-                    appns:cardElevation="4dp"
-                    android:layout_width="0dp"
                     appns:cardBackgroundColor="#85FAB00C"
-                    android:layout_weight="1">
+                    appns:cardCornerRadius="14dp"
+                    appns:cardElevation="4dp"
+                    tools:targetApi="p">
+
                     <LinearLayout
-                        android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="?selectableItemBackground"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
+
                         <TextView
                             android:id="@+id/quran_label42"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/the_sans"
+                            android:gravity="center"
                             android:text="@string/cat_albukhari"
                             android:textColor="@color/white"
                             android:textSize="18sp"
-                            android:gravity="center"
                             android:textStyle="bold" />
+
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"
@@ -468,36 +473,39 @@
                 <!-- Card 10: cat_nawawiya_40 (was Left, now Right) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_nawawiya_40"
-                    appns:cardCornerRadius="14dp"
-                    android:layout_weight="1"
-                    android:layout_height="120dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="16dp"
                     android:layout_width="0dp"
-                    appns:cardBackgroundColor="#85FAB00C"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
+                    appns:cardBackgroundColor="#85FAB00C"
+                    appns:cardCornerRadius="14dp"
                     appns:cardElevation="4dp"
                     tools:ignore="RtlCompat"
                     tools:targetApi="p">
+
                     <LinearLayout
-                        android:background="?selectableItemBackground"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="?selectableItemBackground"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
+
                         <TextView
                             android:id="@+id/category_label47"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/the_sans"
+                            android:gravity="center"
                             android:text="الأربعون النووية"
                             android:textColor="@color/white"
                             android:textSize="18sp"
-                            android:gravity="center"
                             android:textStyle="bold" />
+
                         <ImageView
                             android:layout_width="182dp"
                             android:layout_height="72dp"

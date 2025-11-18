@@ -1,15 +1,15 @@
 package com.eyadalalimi.islamic.pro.other;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
-import androidx.appcompat.content.res.AppCompatResources;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.eyadalalimi.islamic.pro.R;
 import com.eyadalalimi.islamic.pro.nbsahihboukhari.DefaultIndex;
@@ -30,26 +30,15 @@ public class IndexAdapter
     private static final String TAG = "DefaultIndexAdapter_Log";
     private final Context context;
     private final List<DefaultIndex> mRecyclerViewItems;
-    private final Drawable wrappedDrawable;
-    private RecyclerView mRecyclerView;
+    private final RecyclerView mRecyclerView;
     private OnItemClickListener onItemClickListener;
+    private final int leftImageDrawableResId; // Renamed from indexColor to be more descriptive
 
-    public IndexAdapter(Context context, List<DefaultIndex> recyclerViewItems, RecyclerView mRecyclerView, int indexColor) {
+    public IndexAdapter(Context context, List<DefaultIndex> recyclerViewItems, RecyclerView mRecyclerView, int leftImageDrawableResId) {
         this.context = context;
         this.mRecyclerView = mRecyclerView;
         this.mRecyclerViewItems = recyclerViewItems;
-        Drawable unwrappedDrawable = AppCompatResources.getDrawable(context, R.drawable.row_right);
-      /*  if (unwrappedDrawable != null) {
-            wrappedDrawable = DrawableCompat.wrap(unwrappedDrawable);
-            DrawableCompat.setTint(wrappedDrawable, context.getResources().getId(indexColor));
-        } else
-            wrappedDrawable = context.getResources().getDrawable(R.drawable.row_right);
-*//*
-        wrappedDrawable = ContextCompat.getDrawable(context,R.drawable.row_right);
-        wrappedDrawable.setColorFilter(new
-                PorterDuffColorFilter(context.getResources().getId(indexColor), PorterDuff.Mode.OVERLAY));*/
-        wrappedDrawable = ContextCompat.getDrawable(context,indexColor);
-
+        this.leftImageDrawableResId = leftImageDrawableResId; // Store the drawable resource ID
     }
 
     @Override
@@ -80,11 +69,11 @@ public class IndexAdapter
             countryHolder.itemView.setOnClickListener(this);
             countryHolder.getCategoryName().setText(country.getTitle());
 
-
-            countryHolder.getCategoryImage().setImageDrawable(wrappedDrawable);
+            // Set the image for iv_row_right2 using the passed drawable resource ID
+            countryHolder.getIvRowRight2().setImageResource(leftImageDrawableResId);
+            // Set the image for iv_row_right using the default drawable resource ID from XML
+            countryHolder.getIvRowRight().setImageResource(R.drawable.row_right);
         }
-
-
     }
 
     @Override
@@ -103,5 +92,31 @@ public class IndexAdapter
         this.mRecyclerViewItems.clear();
         this.mRecyclerViewItems.addAll(mRecyclerViewItems);
         notifyDataSetChanged();
+    }
+
+    // DialogHolder inner class - Modified to include both ImageViews
+    public static class DialogHolder extends RecyclerView.ViewHolder {
+        private final TextView categoryName;
+        private final ImageView ivRowRight2; // Field for iv_row_right2
+        private final ImageView ivRowRight;  // Field for iv_row_right
+
+        public DialogHolder(View itemView) {
+            super(itemView);
+            categoryName = itemView.findViewById(R.id.tv_category);
+            ivRowRight2 = itemView.findViewById(R.id.iv_row_right2);
+            ivRowRight = itemView.findViewById(R.id.iv_row_right);
+        }
+
+        public TextView getCategoryName() {
+            return categoryName;
+        }
+
+        public ImageView getIvRowRight2() {
+            return ivRowRight2;
+        }
+
+        public ImageView getIvRowRight() {
+            return ivRowRight;
+        }
     }
 }
