@@ -18,11 +18,14 @@ android {
         versionName "2.0"
 
         multiDexEnabled true
+
+        resConfigs "ar", "en"
     }
 
     buildTypes {
         release {
             minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
@@ -77,6 +80,6 @@ dependencies {
 
     // اختبارات
     testImplementation 'junit:junit:4.13.2'
-    implementation 'com.facebook.infer.annotation:infer-annotation:0.11.2'
+    implementation 'com.facebook.infer.annotation:infer-annotation:0.18.0'
 
 }
