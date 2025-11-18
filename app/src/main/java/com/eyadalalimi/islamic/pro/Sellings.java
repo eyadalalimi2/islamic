@@ -81,7 +81,7 @@ public class Sellings extends AppCompatActivity {
                                 startActivity(goToMarket);
                             } catch (ActivityNotFoundException e) {
                                 startActivity(new Intent(Intent.ACTION_VIEW,
-                                        Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+                                        Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
                             }
                             SaveSettings.IsRated = 1;
                             SaveSettings sv = new SaveSettings(getApplicationContext());
@@ -143,9 +143,9 @@ public class Sellings extends AppCompatActivity {
                                     "Analytics\n" +
                                     "3rd party analytics services allow us to monitor and analyze app usage, better understand our audience and user behavior.\n" +
                                     "Flurry\n" +
-                                    "We use Flurry Analytics to collect, monitor and analyze log data, including frequency of use, length of time spent in the app, in order to improve functionality and user-friendliness of our apps. Please see Flurry Privacy Policy – http://www.flurry.com/privacy-policy.html\n" +
+                                    "We use Flurry Analytics to collect, monitor and analyze log data, including frequency of use, length of time spent in the app, in order to improve functionality and user-friendliness of our apps. Please see Flurry Privacy Policy – https://www.flurry.com/privacy-policy.html\n" +
                                     "Google Analytics\n" +
-                                    "Google Analytics is an analysis service provided by Google Inc. Google utilizes the collected data to track and examine the use of This app Apps, to prepare reports on user activities and share them with other Google services. Google may use the data to contextualize and personalize the ads of its own advertising network. (http://www.google.com/intl/en/policies/privacy/)\n" +
+                                    "Google Analytics is an analysis service provided by Google Inc. Google utilizes the collected data to track and examine the use of This app Apps, to prepare reports on user activities and share them with other Google services. Google may use the data to contextualize and personalize the ads of its own advertising network. (https://www.google.com/intl/en/policies/privacy/)\n" +
                                     "Children’s Online Privacy Protection Act Compliance\n" +
                                     "We are in compliance with the requirements of COPPA, we do not collect any personal information from anyone under 13 years of age. Our products and services are all directed to people who are at least 13 years old or older.\n" +
                                     "Contact Us" );

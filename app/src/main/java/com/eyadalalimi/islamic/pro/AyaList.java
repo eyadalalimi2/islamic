@@ -190,7 +190,7 @@ public class AyaList extends AppCompatActivity {
                                         startActivity(goToMarket);
                                     } catch (ActivityNotFoundException e) {
                                         startActivity(new Intent(Intent.ACTION_VIEW,
-                                                Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+                                                Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
                                     }
                                     SaveSettings.IsRated = 1;
                                     SaveSettings sv = new SaveSettings(getApplicationContext());
