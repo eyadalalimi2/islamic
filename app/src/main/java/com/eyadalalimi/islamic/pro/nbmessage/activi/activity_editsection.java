@@ -11,11 +11,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -23,6 +18,12 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.viewpager.widget.ViewPager;
 
 import com.eyadalalimi.islamic.pro.R;
 import com.eyadalalimi.islamic.pro.nbmessage.database.Tablemsg;
@@ -47,7 +48,7 @@ public class activity_editsection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_edit_secreen);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
 
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
@@ -58,7 +59,7 @@ public class activity_editsection extends AppCompatActivity {
             window.setStatusBarColor(Color.parseColor("#142d4c"));
         }
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ChangeColor = (ImageView) findViewById(R.id.chane);
+        ChangeColor = findViewById(R.id.chane);
         ChangeColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,7 +68,7 @@ public class activity_editsection extends AppCompatActivity {
             }
         });
 
-        CopyText = (ImageView) findViewById(R.id.copy);
+        CopyText = findViewById(R.id.copy);
         CopyText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +85,7 @@ public class activity_editsection extends AppCompatActivity {
                 }
             }
         });
-        Share = (ImageView) findViewById(R.id.share);
+        Share = findViewById(R.id.share);
 
         Share.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +93,7 @@ public class activity_editsection extends AppCompatActivity {
 
 
                 String shareBody = Message.get(myPager.getCurrentItem());
+                Toast.makeText(getApplicationContext(), "Sharing: " + shareBody, Toast.LENGTH_LONG).show(); // Added for debugging
                 Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
                 sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject Here");
@@ -101,7 +103,7 @@ public class activity_editsection extends AppCompatActivity {
             }
         });
 
-        Image = (ImageView) findViewById(R.id.text__image);
+        Image = findViewById(R.id.text__image);
         Image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,7 +126,7 @@ public class activity_editsection extends AppCompatActivity {
         }
         adapter = new pageviewer(this,
                 Message, getIntent().getExtras().getInt("postion"), "#000000");
-        myPager = (ViewPager) findViewById(R.id.reviewpager);
+        myPager = findViewById(R.id.reviewpager);
         myPager.setAdapter(adapter);
         myPager.setCurrentItem(getIntent().getExtras().getInt("postion"));
 
@@ -140,7 +142,6 @@ public class activity_editsection extends AppCompatActivity {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 100);
 
-                return;
             }
         }
 //
@@ -163,7 +164,6 @@ public class activity_editsection extends AppCompatActivity {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 100);
-                    return;
                 }
             }
 //
@@ -175,6 +175,7 @@ public class activity_editsection extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         // Check which request we're responding to
         if (requestCode == 100) {
             // Make sure the request was successful
@@ -182,7 +183,7 @@ public class activity_editsection extends AppCompatActivity {
 
                 adapter = new pageviewer(this,
                         Message, getIntent().getExtras().getInt("postion"), data.getExtras().getString("color"));
-                myPager = (ViewPager) findViewById(R.id.reviewpager);
+                myPager = findViewById(R.id.reviewpager);
                 myPager.setAdapter(adapter);
                 myPager.setCurrentItem(getIntent().getExtras().getInt("postion"));
 
@@ -194,7 +195,7 @@ public class activity_editsection extends AppCompatActivity {
     LinearLayout framelayout;
 
     public void SaveaAndSare() {
-        framelayout = (LinearLayout) findViewById(R.id.layo);
+        framelayout = findViewById(R.id.layo);
         framelayout.setDrawingCacheEnabled(true);
         framelayout.buildDrawingCache(true);
         framelayout.buildDrawingCache(true);
