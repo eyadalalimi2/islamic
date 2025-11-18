@@ -1,21 +1,20 @@
 package com.eyadalalimi.islamic.pro.nbmessage.fragm;
 
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.eyadalalimi.islamic.pro.R;
 import com.eyadalalimi.islamic.pro.nbmessage.apapter.adap_msg_section;
 import com.eyadalalimi.islamic.pro.nbmessage.database.Tablemsg;
 import com.eyadalalimi.islamic.pro.nbmessage.database.database;
-
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -51,9 +50,9 @@ public class msghragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.activity_msgpart, container, false);
 
-        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        recyclerView = rootView.findViewById(R.id.recyclerView);
         recylerViewLayoutManager = new GridLayoutManager(getActivity(), 1);
-        recyclerView.setHasFixedSize(true);
+        // recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(recylerViewLayoutManager);
 
@@ -77,7 +76,7 @@ public class msghragment extends Fragment {
         adpater = new adap_msg_section(getActivity(), Message,size_messs );
         recyclerView.setAdapter(adpater);
 
-       adView = (AdView) rootView.findViewById(R.id.adView);
+       adView = rootView.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .setRequestAgent("android_studio:ad_template").build();
         adView.loadAd(adRequest);

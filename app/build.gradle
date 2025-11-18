@@ -77,4 +77,6 @@ dependencies {
 
     // اختبارات
     testImplementation 'junit:junit:4.13.2'
+    implementation 'com.facebook.infer.annotation:infer-annotation:0.11.2'
+
 }
