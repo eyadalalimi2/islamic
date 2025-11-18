@@ -80,7 +80,6 @@
                     android:layout_weight="1"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
-                    android:visibility="gone"
                     appns:cardBackgroundColor="#85FAB00C"
                     appns:cardCornerRadius="14dp"
                     appns:cardElevation="4dp"
@@ -156,8 +155,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:orientation="horizontal">
                 <!-- Card 3: btn_reminder (was Right, now Left) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_reminder"
@@ -248,8 +246,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:orientation="horizontal">
                 <!-- Card 5: qibladirec (was Right, now Left) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/qibladirec"
@@ -389,7 +386,6 @@
                     android:layout_weight="1"
                     android:outlineAmbientShadowColor="@android:color/transparent"
                     android:outlineSpotShadowColor="@android:color/transparent"
-                    android:visibility="gone"
                     appns:cardBackgroundColor="#85FAB00C"
                     appns:cardCornerRadius="14dp"
                     appns:cardElevation="4dp"
@@ -426,8 +422,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:orientation="horizontal">
                 <!-- Card 9: cat_albukhari (was Right, now Left) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_albukhari"
@@ -518,8 +513,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:orientation="horizontal">
                 <!-- Card 11: cat_fiqh (was Right, now Left) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_fiqh"
@@ -609,8 +603,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:orientation="horizontal">
                 <!-- Card 13: cat_library (was Right, now Left) -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cat_library"

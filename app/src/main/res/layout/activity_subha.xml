@@ -69,7 +69,7 @@
         android:layout_width="fill_parent"
         android:layout_height="0.0dip"
         android:layout_marginLeft="25.0dip"
-        android:layout_marginTop="20.0dip"
+        android:layout_marginTop="40.0dip"
         android:layout_marginRight="25.0dip"
         android:layout_weight="1.0">
 
@@ -92,7 +92,7 @@
             android:onClick="onClick"
             android:contentDescription="@string/app_name"
             app:materialIcon="backup_restore"
-            app:materialIconColor="@color/white"
+            app:materialIconColor="@color/myorange"
             app:materialIconSize="36.0dip" />
     </RelativeLayout>
     <View

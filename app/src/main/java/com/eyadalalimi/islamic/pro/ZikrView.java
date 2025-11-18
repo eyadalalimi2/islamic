@@ -5,9 +5,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import androidx.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by anwar_se on 6/24/2019
@@ -16,8 +17,8 @@ import android.view.View;
 public class ZikrView extends View {
 
     private final Paint mPaint = new Paint();
-    private RectF mRectF = new RectF();
-    private int mColor = 0xFF33B5E5;
+    private final RectF mRectF = new RectF();
+    private int mColor = 0xFFEBA800; // Changed default color to myorange
     private int mMax = 33;
     private int mClickCount;
     private int mCycleCount;
@@ -54,26 +55,22 @@ public class ZikrView extends View {
 
         mPaint.setStrokeWidth(center / 15);
 
-        mPaint.setColor(Color.WHITE);
-        mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
-        canvas.drawCircle(center / 10, center / 10, center / 10, mPaint);
-
-        canvas.drawCircle(center, center, center, mPaint);
         mPaint.setStyle(Paint.Style.STROKE);
 
-        mPaint.setColor(getColor());
+        mPaint.setColor(getColor()); // This will now use 0xFFEBA800 (myorange)
         if ((mClickCount * mMax) != 0) {
             canvas.drawArc(mRectF, -90, (mClickCount * 360) / mMax, false, mPaint);
         }
         mPaint.setStrokeWidth(1);
 
-        mPaint.setColor(Color.BLACK);
+        mPaint.setColor(0xFFEBA800); // Set color to myorange for the click count
         mPaint.setTextAlign(Paint.Align.CENTER);
         mPaint.setTextSize((center * 2) / 5);
         mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
         canvas.drawText(Math.round(mClickCount) + "", center, center, mPaint);
 
         mPaint.setTextSize((center * 2) / 20);
+        mPaint.setColor(0xFFEBA800); // Set color to myorange for the cycle count
         canvas.drawText(mCycleCount + "", center / 10, center * 0.13f, mPaint);
 
 
@@ -90,7 +87,7 @@ public class ZikrView extends View {
     public void setColor(int mColor) {
         this.mColor = mColor;
         if (mColor == 0) {
-            this.mColor = 0xFF33B5E5;
+            this.mColor = 0xFFEBA800; // Also update the default here for consistency
         }
         invalidate();
     }
