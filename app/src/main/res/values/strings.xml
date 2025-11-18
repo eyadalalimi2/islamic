@@ -497,8 +497,8 @@
     <string name="quran_page">صفحة : %1$d</string>
 
     <string name="cat_quran_item_read">القرآن مطبوع</string>
-    <string name="cat_quran_item_tafsir">التفسير</string>
-    <string name="cat_quran_item_e3rab">الإعراب</string>
+    <string name="cat_quran_item_tafsir">تفسيرالآيات</string>
+    <string name="cat_quran_item_e3rab">إعراب الآيات</string>
     <string name="cat_quran_item_m3ani">معاني الكلمات</string>
 
     <string name="cat_quran_item_index">الفهرس</string>

@@ -7,13 +7,13 @@
         android:id="@+id/text25"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="right"
+
         android:text="خروج من التطبيق"
-        android:textColor="@color/blue"
+        android:gravity="center"
         android:layout_marginRight="5dp"
         android:textSize="20sp"
         android:fontFamily="@font/the_sans"
-
+        android:textColor="@color/abc_decor_view_status_guard"
         android:layout_marginBottom="10dp"
         android:textStyle="bold" />
     <TextView
@@ -39,18 +39,16 @@
         <Button
             android:id="@+id/yes_bt"
             android:layout_width="150dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/yes"
-            />
+            android:background="@drawable/yes" />
 
         <Button
             android:id="@+id/no_bt"
             android:layout_width="150dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/no"
-            />
+            android:background="@drawable/no" />
 
     </LinearLayout>
 </LinearLayout>
