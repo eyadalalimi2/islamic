@@ -165,13 +165,6 @@
         <activity android:name="com.eyadalalimi.islamic.pro.nbmessage.activi.activitymsg"
             android:theme="@style/AppTheme.NoActionBar"
             android:exported="false"    />
-        <activity android:name="com.eyadalalimi.islamic.pro.nbmessage.activi.activity_editsection"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"   />
-        <activity
-            android:name="com.eyadalalimi.islamic.pro.nbmessage.activi.activity_color"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-            android:exported="false"/>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/aplication_admob_id" />

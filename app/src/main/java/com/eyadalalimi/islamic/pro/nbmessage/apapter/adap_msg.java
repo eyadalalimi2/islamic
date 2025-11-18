@@ -3,7 +3,6 @@ package com.eyadalalimi.islamic.pro.nbmessage.apapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.eyadalalimi.islamic.pro.R;
-import com.eyadalalimi.islamic.pro.nbmessage.activi.activity_editsection;
 import com.eyadalalimi.islamic.pro.nbmessage.database.database;
 
 import java.io.IOException;
@@ -64,24 +64,16 @@ public class adap_msg extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         public ViewHolder(View v) {
             super(v);
-            message = (TextView) v.findViewById(R.id.mess);
-            Copy = (ImageView) v.findViewById(R.id.copy);
-            Whats = (ImageView) v.findViewById(R.id.whats);
-            share = (ImageView) v.findViewById(R.id.share);
-            FOVARATE = (ImageView) v.findViewById(R.id.fovarate);
+            message = v.findViewById(R.id.mess);
+            Copy = v.findViewById(R.id.copy);
+            Whats = v.findViewById(R.id.whats);
+            share = v.findViewById(R.id.share);
+            FOVARATE = v.findViewById(R.id.fovarate);
             Typeface type = Typeface.createFromAsset(context.getAssets(), "the_sans.otf");
             message.setTypeface(type);
             //  Copy
-            message.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent i = new Intent(context, activity_editsection.class);
-                    i.putExtra("part", catogray_messaga);
-                    i.putExtra("postion", getAdapterPosition());
-                    context.startActivity(i);
+            // Removed the OnClickListener for message TextView that launched activity_editsection
 
-                }
-            });
             FOVARATE.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
