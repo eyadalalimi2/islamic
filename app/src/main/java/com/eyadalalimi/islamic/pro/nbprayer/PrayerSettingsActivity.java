@@ -17,7 +17,7 @@ public class PrayerSettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         replaceFragment(new SettingsFragment(), false);
         AlertDialog.Builder builder1 = new AlertDialog.Builder(PrayerSettingsActivity.this);
-        builder1.setMessage("لتعديل مواقيت الصلاة بدويا \n" +
+        builder1.setMessage("لتعديل مواقيت الصلاة يدويا \n" +
                 "فالامر بسيط فقط اختار في الاولى توقيت بلدك ثم اختار طريقة الحساب الذي يعتمدها بلدك (يمكنك تجريبهم كلهم لترى وأنظر ايهم أقرب أو صحيحة حسب توقيتكم )\n " +
                 "واذا لم يضبط عند استخدام طريقة الحساب عدل عليه من القسم الاخير أضف أو انقص دقائق حتى يتوافق معكم");
         builder1.setTitle("ملاحظة");
