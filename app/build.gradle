@@ -5,12 +5,12 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     // ✅ أضف هذه السطر لتعريف مساحة الأسماء
-    namespace 'com.eyadalalimi.islamic.sonya7rvreview'
+    namespace 'com.eyad.alalimi.sonya7rvreview'
 
     compileSdkVersion 35
 
     defaultConfig {
-        applicationId "com.eyadalalimi.islamic.sonya7rvreview"
+        applicationId "com.eyad.alalimi.sonya7rvreview"
         minSdkVersion 23
         targetSdkVersion 35
 

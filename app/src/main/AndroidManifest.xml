@@ -11,9 +11,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
     <application
         android:allowBackup="true"
@@ -22,11 +22,11 @@
         android:supportsRtl="false"
         android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme"
-        android:name="com.eyadalalimi.islamic.sonya7rvreview.MyApp"
+        android:name="com.eyad.alalimi.sonya7rvreview.MyApp"
         tools:ignore="UnusedAttribute">
 
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.MainActivityFist"
+            android:name="com.eyad.alalimi.sonya7rvreview.MainActivityFist"
             android:exported="false"
             tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>
@@ -36,44 +36,44 @@
         </activity>
 
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.qurankarim"
+            android:name="com.eyad.alalimi.sonya7rvreview.qurankarim"
             android:label="@string/app"
-            android:exported="false"/>
-        <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.Adkar_det"
-            android:label="@string/da"
-            android:exported="false"/>
-        <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.managerdb"
-            android:label="@string/title_activity_managerdb"
-            android:screenOrientation="fullSensor"
-            android:exported="false"/>
-        <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.HijriActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"/>
-        <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.ResitesName"
-            android:label="@string/app"
-            android:screenOrientation="fullSensor"
-            android:exported="false"/>
-        <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.Sellings"
-            android:exported="false"/>
-        <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.AyaList"
-            android:label="@string/title_activity_aya_list"
-            android:screenOrientation="fullSensor"
-            android:exported="false"/>
-        <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.MyAdkarActivity"
-            android:label="@string/da"
-            android:exported="false"/>
-        <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbprayer.PrayerSettingsActivity"
             android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.splash_screen"
+            android:name="com.eyad.alalimi.sonya7rvreview.Adkar_det"
+            android:label="@string/da"
+            android:exported="false" />
+        <activity
+            android:name="com.eyad.alalimi.sonya7rvreview.managerdb"
+            android:label="@string/title_activity_managerdb"
+            android:screenOrientation="fullSensor"
+            android:exported="false" />
+        <activity
+            android:name="com.eyad.alalimi.sonya7rvreview.HijriActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name="com.eyad.alalimi.sonya7rvreview.ResitesName"
+            android:label="@string/app"
+            android:screenOrientation="fullSensor"
+            android:exported="false" />
+        <activity
+            android:name="com.eyad.alalimi.sonya7rvreview.Sellings"
+            android:exported="false" />
+        <activity
+            android:name="com.eyad.alalimi.sonya7rvreview.AyaList"
+            android:label="@string/title_activity_aya_list"
+            android:screenOrientation="fullSensor"
+            android:exported="false" />
+        <activity
+            android:name="com.eyad.alalimi.sonya7rvreview.MyAdkarActivity"
+            android:label="@string/da"
+            android:exported="false" />
+        <activity
+            android:name="com.eyad.alalimi.sonya7rvreview.nbprayer.PrayerSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eyad.alalimi.sonya7rvreview.splash_screen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -81,117 +81,116 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.Subha"
+            android:name="com.eyad.alalimi.sonya7rvreview.Subha"
             android:label="@string/subhaaaa"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.asmaallah"
+            android:name="com.eyad.alalimi.sonya7rvreview.asmaallah"
             android:label="@string/asmaaallah"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.Stories"
+            android:name="com.eyad.alalimi.sonya7rvreview.Stories"
             android:label="@string/stories2"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.anbiya"
+            android:name="com.eyad.alalimi.sonya7rvreview.anbiya"
             android:label="@string/qissaanbiya"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.sahaba"
+            android:name="com.eyad.alalimi.sonya7rvreview.sahaba"
             android:label="@string/qissassahaba"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.Moajizat"
+            android:name="com.eyad.alalimi.sonya7rvreview.Moajizat"
             android:label="@string/mo3jizat"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.Islamic"
+            android:name="com.eyad.alalimi.sonya7rvreview.Islamic"
             android:label="@string/qissasislamic"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.Lire_stories"
+            android:name="com.eyad.alalimi.sonya7rvreview.Lire_stories"
             android:label="@string/stories2"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.Lira_anbiyaa"
+            android:name="com.eyad.alalimi.sonya7rvreview.Lira_anbiyaa"
             android:label="@string/qissassahaba"
             android:exported="false"></activity>
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbautoazkar.Azkar_Auto_Activity"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbautoazkar.Azkar_Auto_Activity"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="GoogleAppIndexingWarning"
-            android:exported="false"/>
+            android:exported="false" />
 
-        <receiver android:name="com.eyadalalimi.islamic.sonya7rvreview.nbautoazkar.ReciverNoti" />
+        <receiver android:name="com.eyad.alalimi.sonya7rvreview.nbautoazkar.ReciverNoti" />
 
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbnawawi.NawawiyaActivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbnawawi.NawawiyaActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbsahihboukhari.BukhariActivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbsahihboukhari.BukhariActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"  />
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.other.IndexActivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.other.IndexActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"   />
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbprayer.PrayerActivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbprayer.PrayerActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"    />
+            android:exported="false" />
 
-        <receiver android:name="com.eyadalalimi.islamic.sonya7rvreview.nbprayer.PrayerReceiver" />
+        <receiver android:name="com.eyad.alalimi.sonya7rvreview.nbprayer.PrayerReceiver" />
         <provider
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbprayer.AssetsProvider"
-            android:authorities="com.eyadalalimi.islamic.sonya7rvreview"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbprayer.AssetsProvider"
+            android:authorities="com.eyad.alalimi.sonya7rvreview"
             android:exported="true"
             android:grantUriPermissions="true" />
 
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbholyquran.QuranActivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbholyquran.QuranActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"  />
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbholyquran.QuranIndexActivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbholyquran.QuranIndexActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"   />
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbholyquran.QuranSearchActivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbholyquran.QuranSearchActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"  />
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbholyquran.TextActivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbholyquran.TextActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"  />
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbholyquran.TafsirActivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbholyquran.TafsirActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"  />
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbholyquran.E3rabActivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbholyquran.E3rabActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"  />
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbholyquran.M3aniActivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbholyquran.M3aniActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"    />
+            android:exported="false" />
 
-        <service android:name="com.eyadalalimi.islamic.sonya7rvreview.LocalService" />
+        <service android:name="com.eyad.alalimi.sonya7rvreview.LocalService" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.CompassActivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.CompassActivity"
             android:label="@string/qibla"
             android:screenOrientation="fullSensor"
-            android:exported="false"     />
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbmessage.activi.mainactivity"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbmessage.activi.mainactivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"  />
+            android:exported="false" />
         <activity
-            android:name="com.eyadalalimi.islamic.sonya7rvreview.nbmessage.activi.activitymsg"
+            android:name="com.eyad.alalimi.sonya7rvreview.nbmessage.activi.activitymsg"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false"    />
+            android:exported="false" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/aplication_admob_id" />

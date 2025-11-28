@@ -8,7 +8,7 @@
     android:keepScreenOn="true"
     android:orientation="vertical">
 
-    <com.eyadalalimi.islamic.sonya7rvreview.nbholyquran.RtlViewPager
+    <com.eyad.alalimi.sonya7rvreview.nbholyquran.RtlViewPager
         android:id="@+id/vp_quran"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -37,7 +37,6 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:fontFamily="@font/the_sans"
-
             android:textColor="@color/quran_toolbar_text" />
 
         <TextView
@@ -46,7 +45,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:fontFamily="@font/the_sans"
-
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:textColor="@color/quran_toolbar_text" />
