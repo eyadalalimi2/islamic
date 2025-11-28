@@ -73,7 +73,7 @@
         android:layout_marginRight="25.0dip"
         android:layout_weight="1.0">
 
-        <com.eyadalalimi.islamic.pro.ZikrView
+        <com.eyadalalimi.islamic.sonya7rvreview.ZikrView
             android:id="@+id/zikr_counter"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
