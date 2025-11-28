@@ -1,0 +1,487 @@
+package com.eyad.alalimi.sonya7rvreview;
+
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.app.SearchManager;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Environment;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.SearchView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
+import java.io.BufferedInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+
+public class AyaList extends AppCompatActivity {
+
+    public static final int DIALOG_DOWNLOAD_PROGRESS = 0;
+    public static ArrayList<AuthorClass> listrecitesAya = new ArrayList<AuthorClass>();
+    static String RecitesName = "";
+    /*
+     * @Override
+     * protected Dialog onCreateDialog(int id) {
+     * switch (id) {
+     * case DIALOG_DOWNLOAD_PROGRESS:
+     * mProgressDialog = new ProgressDialog(this);
+     * mProgressDialog.setMessage("Downloading file..");
+     * mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+     * mProgressDialog.setCancelable(false);
+     * mProgressDialog.show();
+     * return mProgressDialog;
+     * default:
+     * return null;
+     * }
+     * }
+     */
+    public boolean ISDonwloading = false;
+    ListView listAya;
+    Typeface typeface, typeface2;
+    LinearLayout LayoutLoading;
+    ProgressBar progressBar;
+    String RecitesAYA = "";
+    SearchView searchView;
+    Menu myMenu;
+    private ProgressDialog mProgressDialog;
+
+    public static boolean isConnectingToInternet(Context context) {
+        ConnectivityManager connectivity = (ConnectivityManager) context.getSystemService(
+                Context.CONNECTIVITY_SERVICE);
+        if (connectivity != null) {
+            NetworkInfo[] info = connectivity.getAllNetworkInfo();
+            if (info != null)
+                for (int i = 0; i < info.length; i++)
+                    if (info[i].getState() == NetworkInfo.State.CONNECTED) {
+                        return true;
+                    }
+        }
+        return false;
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_aya_list);
+        MobileAds.initialize(getApplicationContext());
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        typeface = Typeface.createFromAsset(getAssets(), "font2.ttf");
+        typeface2 = Typeface.createFromAsset(getAssets(), "font5.ttf");
+        // get Recites
+        Bundle b = getIntent().getExtras();
+        RecitesName = b.getString("RecitesName");
+        listAya = findViewById(R.id.listView);
+        // get list of muslim
+        listrecitesAya.clear();
+        LnaguageClass lc = new LnaguageClass();
+        listrecitesAya = lc.GuranAya(RecitesName);
+        listAya.setAdapter(new VivzAdapter(listrecitesAya));
+        LayoutLoading = findViewById(R.id.LayoutLoading);
+        progressBar = findViewById(R.id.progressBar);
+        LayoutLoading.setVisibility(View.GONE);
+        if (!isConnectingToInternet(AyaList.this)) {
+            AlertDialog.Builder builder1 = new AlertDialog.Builder(AyaList.this);
+            builder1.setMessage(
+                    "يجب الإتصال بالإنترنت لكي تعمل جميع وظائف هذه الصفحة بدون مشاكل أو تحميل السور و الإستماع لها بدون إنترنت ، حيث يمكنك الأن الإستماع إلى السور المحملة فقط .");
+            builder1.setTitle("خطأ في الشبكة");
+            builder1.setCancelable(true);
+
+            builder1.setPositiveButton(
+                    "حسنا",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                        }
+                    });
+
+            AlertDialog alert11 = builder1.create();
+            alert11.show();
+            // Toast.makeText(AyaList.this, "لا يوجد اتصال بالانترنيت",
+            // Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    private void DisplayAya() {
+        Intent intent = new Intent(this, managerdb.class);
+        intent.putExtra("RecitesName", RecitesName);
+        intent.putExtra("RecitesAYA", RecitesAYA);
+        startActivity(intent);
+    }
+
+    public void LoadAya() {
+        ListView list = findViewById(R.id.listView);
+
+        // get list of muslim
+        LnaguageClass lc = new LnaguageClass();
+        listrecitesAya = lc.GuranAya(RecitesName);
+        listAya.setAdapter(new VivzAdapter(listrecitesAya));
+
+    }
+
+    @SuppressLint("ObsoleteSdkInt")
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_aya_list, menu);
+        myMenu = menu;
+        // Associate searchable configuration with the SearchView
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            searchView = (SearchView) menu.findItem(R.id.search).getActionView();
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        }
+        // final Context co=this;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String newText) {
+                    ArrayList<AuthorClass> listrecitestemp = new ArrayList<AuthorClass>();
+                    for (AuthorClass listrecitesitem : listrecitesAya) {
+                        if (listrecitesitem.RealName.contains(newText)) {
+                            listrecitestemp.add(listrecitesitem);
+
+                        }
+                    }
+                    listAya.setAdapter(new VivzAdapter(listrecitestemp));
+                    return false;
+                }
+            });
+        }
+        // searchView.setOnCloseListener(this);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id == R.id.gbackmenu) {
+
+            // rate app
+            if (!ISDonwloading) // it he isnot donlaidng know
+                if (SaveSettings.IsRated == 0) {
+                    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            switch (which) {
+                                case DialogInterface.BUTTON_POSITIVE:
+                                    // Yes button clicked
+                                    Uri uri = Uri.parse("market://details?id=" + getPackageName());
+                                    Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                                    // To count with Play market backstack, After pressing back button,
+                                    // to taken back to our application, we need to add following flags to intent.م
+                                    goToMarket.addFlags(
+                                            Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                                    try {
+                                        startActivity(goToMarket);
+                                    } catch (ActivityNotFoundException e) {
+                                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                                Uri.parse("https://play.google.com/store/apps/details?id="
+                                                        + getPackageName())));
+                                    }
+                                    SaveSettings.IsRated = 1;
+                                    SaveSettings sv = new SaveSettings(getApplicationContext());
+                                    sv.SaveData();
+                                    finish();
+                                    break;
+
+                                case DialogInterface.BUTTON_NEGATIVE:
+                                    // No button clicked
+                                    finish();
+                                    break;
+                            }
+                        }
+                    };
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    builder.setMessage(getResources().getString(R.string.rateq))
+                            .setPositiveButton("Yes", dialogClickListener)
+                            .setNegativeButton("No", dialogClickListener).show();
+                } else {
+                    finish();
+                }
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    /// file downlaod
+    public void startDownload(String ImgUrl, String ServerName) {
+        RecitesAYA = ServerName;
+        String url = ImgUrl;// "http://farm1.static.flickr.com/114/298125983_0e4bf66782_b.jpg";
+        new DownloadFileAsync().execute(url);
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    class DownloadFileAsync extends AsyncTask<String, String, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            LayoutLoading.setVisibility(View.VISIBLE);
+            progressBar.setProgress(0);
+            progressBar.setMax(100);
+            ISDonwloading = true;
+
+            // showDialog(DIALOG_DOWNLOAD_PROGRESS);
+        }
+
+        @Override
+        protected String doInBackground(String... aurl) {
+            int count;
+
+            try {
+
+                URL url = new URL(aurl[0]);
+                URLConnection conexion = url.openConnection();
+                conexion.connect();
+
+                int lenghtOfFile = conexion.getContentLength();
+                // Log.d("ANDRO_ASYNC", "Lenght of file: " + lenghtOfFile);
+
+                InputStream input = new BufferedInputStream(url.openStream());
+                String SDPath = Environment.getExternalStorageDirectory().getPath() + "/";
+                OutputStream output = new FileOutputStream(SDPath + RecitesName + RecitesAYA + ".mp3");
+
+                byte[] data = new byte[1024];
+
+                long total = 0;
+
+                while ((count = input.read(data)) != -1) {
+                    total += count;
+                    publishProgress("" + (int) ((total * 100) / lenghtOfFile));
+                    output.write(data, 0, count);
+                }
+
+                output.flush();
+                output.close();
+                input.close();
+            } catch (Exception e) {
+            }
+            return null;
+
+        }
+
+        protected void onProgressUpdate(String... progress) {
+            // Log.d("ANDRO_ASYNC",progress[0]);
+            // mProgressDialog.setProgress(Integer.parseInt(progress[0]));
+            progressBar.setProgress(Integer.parseInt(progress[0]));
+        }
+
+        @Override
+        protected void onPostExecute(String unused) {
+            LoadAya();
+            // dismissDialog(DIALOG_DOWNLOAD_PROGRESS);
+            LayoutLoading.setVisibility(View.GONE);
+            ISDonwloading = false;
+
+        }
+    }
+
+    // =====================================
+    class VivzAdapter extends BaseAdapter {
+
+        ArrayList<AuthorClass> listrecitesLocal;
+
+        VivzAdapter(ArrayList<AuthorClass> listrecites) {
+
+            listrecitesLocal = new ArrayList<AuthorClass>();
+            listrecitesLocal = listrecites;
+
+        }
+
+        @Override
+        public int getCount() {
+            return this.listrecitesLocal.size();
+        }
+
+        @Override
+        public String getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int i, View view, ViewGroup viewGroup) {
+            LayoutInflater mInflater = getLayoutInflater();
+            View row = mInflater.inflate(R.layout.single_rowayalist, null);
+
+            TextView title = row.findViewById(R.id.textView1);
+            TextView cost = row.findViewById(R.id.textView2);
+            ImageView image = row.findViewById(R.id.imageView);
+            Button budownload = row.findViewById(R.id.button);
+            title.setTypeface(typeface);
+            cost.setTypeface(typeface2);
+            // budownload.setBackground(getResources().getDrawable(R.drawable.buttonred)) ;
+            // // "@drawable/buttonred");
+            final AuthorClass temp = this.listrecitesLocal.get(i);
+            final int postion = i;
+            // final String linkaya=temp.ImgUrl;
+            final String ServerName = temp.ServerName;
+            /*
+             * //check if SD availbel
+             * Boolean isSDPresent =
+             * android.os.Environment.getExternalStorageState().equals(android.os.
+             * Environment.MEDIA_MOUNTED);
+             *
+             * if(isSDPresent)
+             * {
+             * // yes SD-card is present
+             * // budownload.setEnabled(true);
+             * budownload.setVisibility(View.VISIBLE);
+             * }
+             * else
+             * { // No SD-card is present;
+             * budownload.setVisibility(View.GONE);
+             *
+             * }
+             */
+            // if already dowload
+            if (temp.StateName.equals(LnaguageClass.avalible()))
+                budownload.setVisibility(View.INVISIBLE);
+            // downlaod file
+            budownload.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final Dialog dialog = new Dialog(AyaList.this);
+                    dialog.setContentView(R.layout.dawnald_dialog);
+                    dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialogbg);
+                    dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
+                    dialog.getWindow().setTitle("تنبيه");
+                    dialog.getWindow().setTitleColor(Color.MAGENTA);
+                    TextView text = dialog.findViewById(R.id.text);
+                    text.setText("هل تريد تحميل هذه السورة؟");
+                    dialog.show();
+                    Button yesbutton = dialog.findViewById(R.id.yes_bt3);
+                    // if button is clicked, close the custom dialog
+                    yesbutton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if (isConnectingToInternet(AyaList.this)) {
+
+                                if (!ISDonwloading)
+                                    startDownload(temp.ImgUrl, ServerName);
+                                // Toast.makeText(this, linkaya, Toast.LENGTH_LONG).show();
+
+                            } else {
+                                Toast.makeText(AyaList.this, "لا يوجد اتصال بالانترنيت", Toast.LENGTH_SHORT).show();
+                            }
+
+                            dialog.dismiss();
+
+                        }
+                    });
+
+                    Button nobutton = dialog.findViewById(R.id.no_bt3);
+                    // if button is clicked, close the custom dialog
+                    nobutton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                            dialog.dismiss();
+
+                        }
+                    });
+
+                }
+            });
+            // =====================================================
+            image.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (!ISDonwloading) {
+
+                        for (int i = 0; i < listrecitesAya.size(); i++) {
+                            if (listrecitesAya.get(i).RealName.equals(temp.RealName)) {
+                                RecitesAYA = String.valueOf(i);// ServerName;
+                                DisplayAya();
+                                break;
+                            }
+
+                        }
+                    }
+
+                }
+            });
+            title.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (!ISDonwloading) {
+                        for (int i = 0; i < listrecitesAya.size(); i++) {
+                            if (listrecitesAya.get(i).RealName.equals(temp.RealName)) {
+                                RecitesAYA = String.valueOf(i);// ServerName;
+                                DisplayAya();
+                                break;
+                            }
+
+                        }
+
+                    }
+
+                }
+            });
+
+            // budownload.setText(getResources().getString(R.string.downlaod));
+            title.setText(temp.RealName);
+            cost.setText(temp.StateName);// it updated
+            // image.setImageResource(temp.ImgUrl);
+
+            return row;
+
+        }
+
+    }
+}
